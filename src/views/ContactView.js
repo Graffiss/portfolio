@@ -75,7 +75,8 @@ const ContactView = () => (
       }}
     >
       {({ isSubmitting }) => (
-        <StyledForm>
+        <StyledForm name="contact" method="post">
+          <input type="hidden" name="form-name" value="contact" />
           <StyledInput as={Field} type="email" name="email" placeholder="Email" />
           <ErrorMessage name="email" component="div" />
           <StyledInput as={Field} type="text" name="title" placeholder="Tytuł wiadomości" />
