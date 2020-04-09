@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat:300,600&display=swap');
+
     *, *::before, *::after {
         margin: 0;
         padding: 0;
