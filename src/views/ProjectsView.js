@@ -1,10 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import SidebarTemplate from '../templates/SidebarTemplate';
+import styled from 'styled-components';
 import Button from '../components/atoms/Button/Button';
 
+const StyledWrapper = styled.div`
+  grid-area: content;
+  padding: 0 100px;
+`;
+
 const ProjectView = ({ projects }) => (
-  <SidebarTemplate>
+  <StyledWrapper>
     <h1>Moje projekty:</h1>
     {projects.map(({ id, image, title, desc }) => (
       <div key={id}>
@@ -14,7 +19,7 @@ const ProjectView = ({ projects }) => (
         <Button>Sprawdź</Button>
       </div>
     ))}
-  </SidebarTemplate>
+  </StyledWrapper>
 );
 
 const mapStateToProps = (state) => {

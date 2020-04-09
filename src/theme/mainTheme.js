@@ -1,4 +1,4 @@
 export const theme = {
-  primary: 'hsl(49, 100%, 58%)',
-  secondary: 'hsl(196, 83%, 75%)',
+  day: 'white',
+  night: '#242427',
 };

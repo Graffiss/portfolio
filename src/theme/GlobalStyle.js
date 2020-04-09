@@ -2,6 +2,8 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     *, *::before, *::after {
+        margin: 0;
+        padding: 0;
         box-sizing: border-box;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -12,7 +14,6 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        padding-left: 150px;
         font-size: 1.6rem;
         font-family: 'Montserrat', sans-serif;
     }
