@@ -9,6 +9,7 @@
     "document": true
   },
   "rules": {
+    "react/state-in-constructor": ["never"],
     "import/prefer-default-export": 0,
     "react/jsx-filename-extension": [
       1,

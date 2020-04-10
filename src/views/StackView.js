@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ButtonStack from '../components/atoms/ButtonStack/ButtonStack';
-import reactIcon from '../assets/icons/simple-icons_react.svg';
-import reduxIcon from '../assets/icons/simple-icons_redux.svg';
+import ButtonList from '../components/molecules/StackList/StackList';
 
 const StyledWrapper = styled.div`
   grid-area: content;
@@ -29,16 +27,7 @@ const StyledGrid = styled.div`
 const StackView = () => (
   <StyledWrapper>
     <StyledGrid>
-      <ButtonStack icon={reactIcon} />
-      <ButtonStack icon={reduxIcon} />
-      <ButtonStack icon={reduxIcon} />
-      <ButtonStack icon={reduxIcon} />
-      <ButtonStack icon={reduxIcon} />
-      <ButtonStack icon={reduxIcon} />
-      <ButtonStack icon={reduxIcon} />
-      <ButtonStack icon={reduxIcon} />
-      <ButtonStack icon={reduxIcon} />
-      <ButtonStack icon={reduxIcon} />
+      <ButtonList />
     </StyledGrid>
   </StyledWrapper>
 );

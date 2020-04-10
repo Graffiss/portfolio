@@ -5,7 +5,6 @@ const ButtonStack = styled.button`
   width: 200px;
   height: 200px;
   background-image: url(${({ icon }) => icon});
-  fill: #db3340;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 50% 50%;
@@ -20,11 +19,11 @@ const ButtonStack = styled.button`
     border: 3px solid #9e2b35;
     background-image: none;
 
-    :before {
-      content: 'React';
+    &:before {
+      content: attr(data-content);
       color: #9e2b35;
       font-weight: 600;
-      font-size: 24px;
+      font-size: 25px;
     }
   }
 `;

@@ -17,11 +17,11 @@ const StyledLetter = styled.div`
   position: relative;
   p {
     font-family: 'Abril Fatface';
-    font-size: 90rem;
+    font-size: 90vh;
     text-shadow: 10px 5px #9e2b35;
     color: #db3340;
     position: absolute;
-    bottom: -465px;
+    bottom: -450px;
     z-index: -1;
     padding: 0;
     margin: 0;
@@ -51,6 +51,7 @@ const StyledIntro = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    margin-bottom: 40px;
 
     h1 {
       color: #4f4d57;
