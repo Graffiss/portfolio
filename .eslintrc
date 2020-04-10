@@ -9,7 +9,7 @@
     "document": true
   },
   "rules": {
-    "react/state-in-constructor": ["never"],
+    "react/state-in-constructor": [0, "always"],
     "import/prefer-default-export": 0,
     "react/jsx-filename-extension": [
       1,

@@ -57,12 +57,14 @@ const StyledIntro = styled.div`
       color: #4f4d57;
       font-weight: 600;
       font-size: 90px;
+      text-align: right;
     }
 
     h3 {
       color: #9e2b35;
       font-weight: 300;
       font-size: 55px;
+      text-align: right;
     }
   }
 `;

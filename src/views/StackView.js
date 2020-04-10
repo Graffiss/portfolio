@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import ButtonList from '../components/molecules/StackList/StackList';
+import ButtonList from '../components/organisms/StackList/StackList';
 
 const StyledWrapper = styled.div`
   grid-area: content;
-  padding: 0 100px;
+  padding: 20px 80px;
   display: flex;
   align-items: center;
   justify-content: center;

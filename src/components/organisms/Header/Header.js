@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import HeaderNav from '../../molecules/HeaderNav/HeaderNav';
 
 const StyledHeader = styled.header`
+  grid-area: header;
   display: grid;
-  grid-template-columns: 250px 1fr;
+  grid-template-columns: 200px 1fr;
   align-items: center;
   padding: 0 40px;
 
@@ -12,6 +13,7 @@ const StyledHeader = styled.header`
     color: #9e2b35;
     font-family: 'Abril Fatface', cursive;
     font-size: 30px;
+    padding-left: 60px;
   }
 `;
 
