@@ -15,7 +15,6 @@ const ButtonStack = styled.button`
   &:hover {
     border: 3px solid #e93f4c;
     box-shadow: 10px 10px 0 #9e2b35;
-    fill: white;
     border: 3px solid #9e2b35;
     background-image: none;
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import Button from '../components/atoms/Button/Button';
 
 const StyledWrapper = styled.div`
@@ -79,7 +80,9 @@ const IntroView = () => (
         <h1>Andrzej Bogdoł</h1>
         <h3>React Developer</h3>
       </div>
-      <Button big>Projekty</Button>
+      <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/projekty">
+        <Button big>Projekty</Button>
+      </Link>
     </StyledIntro>
   </StyledWrapper>
 );
