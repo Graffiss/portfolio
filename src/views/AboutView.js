@@ -19,7 +19,7 @@ const StyledPicture = styled.div`
     height: 400px;
     width: 400px;
     border-radius: 100%;
-    border: 15px solid #db3340;
+    border: 15px solid ${({ theme }) => theme.lightRed};
   }
 `;
 
@@ -32,13 +32,13 @@ const StyledText = styled.div`
   padding-left: 30px;
 
   h2 {
-    color: #9e2b35;
+    color: ${({ theme }) => theme.darkRed};
     font-size: 60px;
     font-weight: 600;
   }
 
   p {
-    color: #4f4d57;
+    color: ${({ theme }) => theme.text};
     font-size: 30px;
     font-weight: 300;
     padding-top: 30px;

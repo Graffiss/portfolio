@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../theme/GlobalStyle';
-import { lightTheme } from '../theme/theme';
+import { lightTheme, darkTheme } from '../theme/theme';
 import StyledGridTemplate from './StyledGridTemplate';
 
 const StyledMainTemplate = styled.div`
@@ -18,13 +18,25 @@ const StyledMainTemplate = styled.div`
   position: relative;
 `;
 
-const MainTemplate = ({ children }) => (
-  <StyledMainTemplate>
-    <GlobalStyle />
-    <ThemeProvider theme={lightTheme}>{children}</ThemeProvider>
-    <StyledGridTemplate />
-  </StyledMainTemplate>
-);
+const MainTemplate = ({ children }) => {
+  const [theme, setTheme] = useState('light');
+  const toggleTheme = () => {
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  };
+  return (
+    <StyledMainTemplate>
+      <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+        {children}
+        <GlobalStyle />
+        <StyledGridTemplate />
+      </ThemeProvider>
+    </StyledMainTemplate>
+  );
+};
 
 MainTemplate.propTypes = {
   children: PropTypes.element.isRequired,

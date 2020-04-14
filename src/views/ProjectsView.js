@@ -14,8 +14,8 @@ const StyledWrapper = styled.div`
   justify-content: center;
 
   p {
-    color: #ff4656;
-    border-bottom: 2px solid #9e2b35;
+    color: ${({ theme }) => theme.pink};
+    border-bottom: 2px solid ${({ theme }) => theme.darkRed};
     font-weight: 300;
     font-size: 30px;
     margin-bottom: 10px;

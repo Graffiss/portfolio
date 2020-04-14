@@ -6,7 +6,7 @@ const StyledWrapper = styled.nav`
   display: flex;
   justify-content: flex-end;
   .active {
-    border-bottom: 5px solid #9e2b35;
+    border-bottom: 5px solid ${({ theme }) => theme.darkRed};
   }
 `;
 
@@ -19,7 +19,7 @@ const StyledLinksList = styled.ul`
 const StyledNavItems = styled(NavLink)`
   margin-right: 50px;
   text-decoration: none;
-  color: #4f4d57;
+  color: ${({ theme }) => theme.text};
   font-weight: 300;
   font-size: 30px;
   padding-left: 10px;

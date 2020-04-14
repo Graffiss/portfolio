@@ -7,8 +7,8 @@ const Button = styled.button`
   color: white;
   text-decoration: none;
   padding: 0;
-  background-color: #9e2b35;
-  box-shadow: 5px 5px #db3340;
+  background-color: ${({ theme }) => theme.darkRed};
+  box-shadow: 5px 5px ${({ theme }) => theme.lightRed};
   font-family: 'Montserrat';
   font-weight: 600;
   font-size: 22px;

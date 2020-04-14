@@ -7,8 +7,8 @@ import Button from '../../atoms/Button/Button';
 const StyledProject = styled.div`
   height: 488px;
   width: 730px;
-  background-color: white;
-  border: 3px solid #db3340;
+  background-color: ${({ theme }) => theme.body};
+  border: 3px solid ${({ theme }) => theme.lightRed};
   border-radius: 50px;
   display: flex;
   flex-direction: column;
@@ -17,9 +17,9 @@ const StyledProject = styled.div`
   margin: 20px 20px;
 
   &:hover {
-    border: 3px solid #e93f4c;
-    box-shadow: 10px 10px 0 #9e2b35;
-    border: 3px solid #9e2b35;
+    border: 3px solid ${({ theme }) => theme.darkRed};
+    box-shadow: 10px 10px 0 ${({ theme }) => theme.darkRed};
+    border: 3px solid ${({ theme }) => theme.darkRed};
     background-image: none;
   }
 
@@ -29,7 +29,7 @@ const StyledProject = styled.div`
   }
 
   h1 {
-    color: #4f4d57;
+    color: ${({ theme }) => theme.text};
   }
 `;
 

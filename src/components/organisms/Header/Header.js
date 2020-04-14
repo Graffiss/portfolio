@@ -11,19 +11,15 @@ const StyledHeader = styled.header`
   padding: 0 80px;
 
   h3 {
-    color: #9e2b35;
+    color: ${({ theme }) => theme.darkRed};
     font-family: 'Abril Fatface', cursive;
     font-size: 30px;
   }
 `;
 
 class Header extends React.Component {
-  state = {
-    nightMode: false,
-  };
-
   render() {
-    const { nightMode } = this.state;
+    const { theme, toggleTheme } = this.props;
 
     return (
       <StyledHeader>
@@ -40,12 +36,8 @@ class Header extends React.Component {
               base: 'rgb(158,43,53)',
             },
           }}
-          value={nightMode || false}
-          onToggle={(value) => {
-            this.setState({
-              nightMode: !value,
-            });
-          }}
+          value={theme}
+          onToggle={toggleTheme}
         />
       </StyledHeader>
     );
