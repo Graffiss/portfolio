@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../theme/GlobalStyle';
-import { theme } from '../theme/mainTheme';
+import { lightTheme } from '../theme/theme';
+import StyledGridTemplate from './StyledGridTemplate';
 
 const StyledMainTemplate = styled.div`
   display: grid;
@@ -14,12 +15,14 @@ const StyledMainTemplate = styled.div`
   grid-template-rows: 100px 1fr 100px;
   grid-gap: 10px;
   height: 100vh;
+  position: relative;
 `;
 
 const MainTemplate = ({ children }) => (
   <StyledMainTemplate>
     <GlobalStyle />
-    <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    <ThemeProvider theme={lightTheme}>{children}</ThemeProvider>
+    <StyledGridTemplate />
   </StyledMainTemplate>
 );
 

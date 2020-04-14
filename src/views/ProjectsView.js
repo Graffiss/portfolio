@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Redirect } from 'react-router-dom';
 import Button from '../components/atoms/Button/Button';
+import ProjectCard from '../components/molecules/ProjectCard/ProjectCard';
 import organicMarketPhoto from '../assets/images/projects/organic-market-project-mockup_v2.png';
 import realEstatePhoto from '../assets/images/projects/realEstateProject.png';
 
@@ -30,35 +30,6 @@ const StyledProjectWrapper = styled.div`
   padding-bottom: 20px;
 `;
 
-const StyledProject = styled.div`
-  height: 488px;
-  width: 730px;
-  background-color: white;
-  border: 3px solid #db3340;
-  border-radius: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  margin: 20px 20px;
-
-  &:hover {
-    border: 3px solid #e93f4c;
-    box-shadow: 10px 10px 0 #9e2b35;
-    border: 3px solid #9e2b35;
-    background-image: none;
-  }
-
-  img {
-    height: 290px;
-    width: 390px;
-  }
-
-  h1 {
-    color: #4f4d57;
-  }
-`;
-
 class ProjectView extends Component {
   state = {
     projects: [
@@ -68,6 +39,7 @@ class ProjectView extends Component {
         title: 'Organic Food Market',
         desc:
           'Sklep ecommerce z produktami organicznymi. Dodatkowo posiada blog oparty o Gatsby oraz autoryzację inwentarza dzięki Firebase',
+        stack: ['react', 'redux', 'gatsby', 'graphql'],
       },
       {
         id: 2,
@@ -75,31 +47,18 @@ class ProjectView extends Component {
         title: 'Home Pantry',
         desc:
           'Projekt przygotowany w ramach wyzwania organizowanego przez firmę Eduweb: React w 10 dni',
+        stack: ['react', 'redux', 'firebase', 'styled.components'],
       },
     ],
-    redirect: false,
-  };
-
-  handleClick = () => {
-    this.setState({ redirect: true });
   };
 
   render() {
-    const { projects, redirect } = this.state;
-
-    if (redirect) {
-      return <Redirect to={`/projekty/${projects.id}`} />;
-    }
-
+    const { projects } = this.state;
     return (
       <StyledWrapper>
         <StyledProjectWrapper>
-          {projects.map(({ id, image, title }) => (
-            <StyledProject key={id} id={id}>
-              <h1>{title}</h1>
-              <img src={image} alt={title} />
-              <Button onClick={this.handleClick}>Sprawdź</Button>
-            </StyledProject>
+          {projects.map(({ id, image, title, desc, stack }) => (
+            <ProjectCard key={id} id={id} image={image} title={title} desc={desc} stack={stack} />
           ))}
         </StyledProjectWrapper>
 
