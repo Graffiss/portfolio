@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
+import AppContext from '../context/context';
 import GlobalStyle from '../theme/GlobalStyle';
 import { lightTheme, darkTheme } from '../theme/theme';
 import StyledGridTemplate from './StyledGridTemplate';
@@ -19,22 +20,30 @@ const StyledMainTemplate = styled.div`
 `;
 
 const MainTemplate = ({ children }) => {
-  const [theme, setTheme] = useState('light');
+  const [nightMode, setNightMode] = useState(false);
   const toggleTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark');
+    if (nightMode === false) {
+      setNightMode(true);
     } else {
-      setTheme('light');
+      setNightMode(false);
     }
   };
+
+  const contextElements = {
+    nightMode,
+    toggleTheme
+  }
+
   return (
+    <AppContext.Provider value={contextElements}>
     <StyledMainTemplate>
-      <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+      <ThemeProvider theme={nightMode === false ? lightTheme : darkTheme}>
         {children}
         <GlobalStyle />
         <StyledGridTemplate />
       </ThemeProvider>
     </StyledMainTemplate>
+    </AppContext.Provider>
   );
 };
 
