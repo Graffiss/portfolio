@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
+import { useNightMode } from '../hook/useNightMode';
 import AppContext from '../context/context';
 import GlobalStyle from '../theme/GlobalStyle';
 import { lightTheme, darkTheme } from '../theme/theme';
@@ -20,14 +21,8 @@ const StyledMainTemplate = styled.div`
 `;
 
 const MainTemplate = ({ children }) => {
-  const [nightMode, setNightMode] = useState(false);
-  const toggleTheme = () => {
-    if (nightMode === false) {
-      setNightMode(true);
-    } else {
-      setNightMode(false);
-    }
-  };
+  const [nightMode, toggleTheme] = useNightMode();
+  const themeMode = nightMode === false ? lightTheme : darkTheme;
 
   const contextElements = {
     nightMode,
@@ -37,7 +32,7 @@ const MainTemplate = ({ children }) => {
   return (
     <AppContext.Provider value={contextElements}>
     <StyledMainTemplate>
-      <ThemeProvider theme={nightMode === false ? lightTheme : darkTheme}>
+      <ThemeProvider theme={themeMode}>
         {children}
         <GlobalStyle />
         <StyledGridTemplate />

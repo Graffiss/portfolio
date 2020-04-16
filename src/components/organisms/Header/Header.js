@@ -36,7 +36,7 @@ const Header = () => (
               base: 'rgb(158,43,53)',
             },
           }}
-          value={context.nightMode || false}
+          value={context.nightMode}
           onToggle={context.toggleTheme}
         />}
         </AppContext.Consumer>
