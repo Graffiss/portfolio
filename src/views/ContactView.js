@@ -58,7 +58,11 @@ const StyledTextarea = styled.textarea`
 const ContactView = () => (
   <StyledWrapper>
     <Formik
-      initialValues={{ email: '', title: '', message: '' }}
+      initialValues={{ "bot-field": "",
+      "form-name": "contact",
+      email: '',
+      title: '',
+      message: '' }}
       validate={(values) => {
         const errors = {};
         if (!values.email) {
@@ -76,6 +80,8 @@ const ContactView = () => (
     >
       {({ isSubmitting }) => (
         <StyledForm>
+          <Field type="hidden" name="bot-field" />
+          <Field type="hidden" name="form-name" />
           <StyledInput as={Field} type="email" name="email" placeholder="Email" />
           <ErrorMessage name="email" component="div" />
           <StyledInput as={Field} type="text" name="title" placeholder="Tytuł wiadomości" />
