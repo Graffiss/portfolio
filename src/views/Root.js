@@ -10,6 +10,7 @@ import StackView from './StackView';
 import ProjectsView from './ProjectsView';
 import IntroView from './IntroView';
 import AboutView from './AboutView';
+import ProjectDetailsView from './ProjectDetailsView';
 
 const Root = () => (
   <Provider store={store}>
@@ -18,7 +19,8 @@ const Root = () => (
         <Header />
         <Switch>
           <Route exact path="/" component={IntroView} />
-          <Route path="/projekty" component={ProjectsView} />
+          <Route exact path="/projekty" component={ProjectsView} />
+          <Route path="/projekty/:id" component={ProjectDetailsView} />
           <Route path="/stack" component={StackView} />
           <Route path="/o-mnie" component={AboutView} />
           <Route path="/kontakt" component={ContactView} />

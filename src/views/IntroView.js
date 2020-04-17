@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import Button from '../components/atoms/Button/Button';
 
 const StyledWrapper = styled.div`
@@ -17,11 +18,11 @@ const StyledLetter = styled.div`
   position: relative;
   p {
     font-family: 'Abril Fatface';
-    font-size: 90rem;
-    text-shadow: 10px 5px #9e2b35;
-    color: #db3340;
+    font-size: 90vh;
+    text-shadow: 10px 5px ${({ theme }) => theme.darkRed};
+    color: ${({ theme }) => theme.lightRed};
     position: absolute;
-    bottom: -465px;
+    bottom: -450px;
     z-index: -1;
     padding: 0;
     margin: 0;
@@ -32,9 +33,9 @@ const StyledLetter = styled.div`
       display: block;
       width: 120%;
       height: 54px;
-      background-color: white;
-      border: 1px solid #f5f5f5;
-      box-shadow: 50px 50px 70px -10px rgba(79, 77, 87, 1);
+      background-color: ${({ theme }) => theme.body};
+      border: 1px solid ${({ theme }) => theme.boxBorder};
+      box-shadow: 50px 50px 70px -10px ${({ theme }) => theme.boxShadow};
       top: 78%;
       left: 0;
     }
@@ -51,17 +52,20 @@ const StyledIntro = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    margin-bottom: 40px;
 
     h1 {
-      color: #4f4d57;
+      color: ${({ theme }) => theme.text};
       font-weight: 600;
       font-size: 90px;
+      text-align: right;
     }
 
     h3 {
-      color: #9e2b35;
+      color: ${({ theme }) => theme.darkRed};
       font-weight: 300;
       font-size: 55px;
+      text-align: right;
     }
   }
 `;
@@ -76,7 +80,9 @@ const IntroView = () => (
         <h1>Andrzej Bogdoł</h1>
         <h3>React Developer</h3>
       </div>
-      <Button big>Projekty</Button>
+      <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/projekty">
+        <Button big>Projekty</Button>
+      </Link>
     </StyledIntro>
   </StyledWrapper>
 );

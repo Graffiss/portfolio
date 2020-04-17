@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+
     *, *::before, *::after {
         margin: 0;
         padding: 0;
@@ -15,7 +16,9 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         font-size: 1.6rem;
+        background-color: ${({ theme }) => theme.body};
         font-family: 'Montserrat', sans-serif;
+        
     }
 `;
 
