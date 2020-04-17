@@ -16,11 +16,11 @@ const StyledGrid = styled.div`
     border-right: 1px solid ${({ theme }) => theme.backgroundGrid};
   }
 
-  &.no-right-border {
+  .no-right-border {
     border-right: none;
   }
 
-  &.no-bottom-border {
+  .no-bottom-border {
     border-bottom: none;
   }
 `;

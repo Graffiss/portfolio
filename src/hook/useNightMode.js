@@ -6,16 +6,18 @@ export const useNightMode = () => {
 const [nightMode, setNightMode] = useState(false);
 const toggleTheme = () => {
     if (nightMode === false) {
-      window.localStorage.setItem('nightMode', true);
       setNightMode(true);
+      window.localStorage.setItem('nightMode', true);
     } else {
-      window.localStorage.setItem('nightMode', false)
       setNightMode(false);
+      window.localStorage.setItem('nightMode', false)
+
     }
   };
 
   useEffect(()=> {
-  window.localStorage.getItem('nightMode');
+  const localMode = window.localStorage.getItem('nightMode');
+  setNightMode(JSON.parse(localMode));
 
 
   }, []);
