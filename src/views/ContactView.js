@@ -74,19 +74,20 @@ const ContactView = () => (
       }}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
+          
           setSubmitting(false);
         }, 400);
       }}
     >
-      {({ isSubmitting }) => (
-        <StyledForm>
+      {({ values, handleSubmit, isSubmitting }) => (
+        <StyledForm onSubmit={handleSubmit}>
           <Field type="hidden" name="bot-field" />
           <Field type="hidden" name="form-name" />
-          <StyledInput as={Field} type="email" name="email" placeholder="Email" />
+          <StyledInput as={Field} type="email" name="email" placeholder="Email" value={values.email}/>
           <ErrorMessage name="email" component="div" />
-          <StyledInput as={Field} type="text" name="title" placeholder="Tytuł wiadomości" />
+          <StyledInput as={Field} type="text" name="title" placeholder="Tytuł wiadomości" value={values.title}/>
           <ErrorMessage name="text" component="div" />
-          <StyledTextarea as="textarea" name="message" placeholder="Wpisz treść wiadomości..." />
+          <StyledTextarea as="textarea" name="message" placeholder="Wpisz treść wiadomości..." value={values.message}/>
           <ErrorMessage name="content" component="div" />
           <Button type="submit" disabled={isSubmitting}>
             wyślij
