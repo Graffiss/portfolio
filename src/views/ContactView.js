@@ -87,7 +87,6 @@ const ContactView = () => (
           })
             .then(() => alert("Success!"))
             .catch(error => alert(error));
-            console.log(values);
             resetForm();
       }
     }
