@@ -12,6 +12,12 @@ const ButtonIcon = styled.a`
   border: none;
   cursor: pointer;
   margin-left: 20px;
+
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+  }
 `;
 
 export default ButtonIcon;

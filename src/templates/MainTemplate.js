@@ -18,6 +18,12 @@ const StyledMainTemplate = styled.div`
   grid-gap: 10px;
   height: 100vh;
   position: relative;
+
+  @media (max-width: 768px) {
+    grid-template-rows: 70px 1fr 70px;
+
+  }
+
 `;
 
 const MainTemplate = ({ children }) => {

@@ -25,6 +25,12 @@ const ButtonStack = styled.button`
       font-size: 25px;
     }
   }
+
+  @media (max-width: 768px) {
+    width: 100px;
+    height: 100px;
+  }
+
 `;
 
 export default ButtonStack;

@@ -7,8 +7,8 @@ const StyledGrid = styled.div`
   grid-template-rows: 1fr 2fr 0.25fr 1fr;
   grid-template-columns: 0.5fr 0.5fr 1fr 2fr 1fr;
   background: ${({ theme }) => theme.body};
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   z-index: -2;
 
   div {

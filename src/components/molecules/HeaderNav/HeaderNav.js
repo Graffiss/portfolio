@@ -23,6 +23,14 @@ const StyledNavItems = styled(NavLink)`
   font-weight: 300;
   font-size: 30px;
   padding-left: 10px;
+
+  @media (max-width: 1256px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 1150px) {
+    display:none;
+  }
 `;
 
 const HeaderNav = () => (

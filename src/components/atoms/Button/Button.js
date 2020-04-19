@@ -30,6 +30,12 @@ const Button = styled.button`
       height: 96px;
       font-size: 32px;
     `}
+
+    @media (max-width: 768px) {
+    width: 160px;
+    height: 50px;
+    font-size: 16px;
+  }
 `;
 
 export default Button;

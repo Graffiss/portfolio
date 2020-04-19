@@ -10,6 +10,10 @@ const StyledWrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: 0 100px;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
 `;
 
 const StyledForm = styled(Form)`
@@ -34,6 +38,12 @@ const StyledInput = styled.input`
   ::placeholder {
     color: white;
   }
+
+  @media (max-width: 768px) {
+    width: 340px;
+    height: 50px;
+    font-size: 16px;
+  }
 `;
 
 const StyledTextarea = styled.textarea`
@@ -52,6 +62,10 @@ const StyledTextarea = styled.textarea`
 
   ::placeholder {
     color: white;
+  }
+  @media (max-width: 768px) {
+    width: 340px;
+    font-size: 16px;
   }
 `;
 

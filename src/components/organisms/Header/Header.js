@@ -16,6 +16,10 @@ const StyledHeader = styled.header`
     font-family: 'Abril Fatface', cursive;
     font-size: 30px;
   }
+
+  @media (max-width: 768px) {
+    padding: 0 40px;
+  }
 `;
 
 const Header = () => (
