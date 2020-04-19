@@ -8,6 +8,9 @@ const StyledWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 768px) {
+    padding: 20px 20px;
+  }
 `;
 
 const StyledGrid = styled.div`

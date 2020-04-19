@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ToggleButton from 'react-toggle-button';
 import styled from 'styled-components';
 import HeaderNav from '../../molecules/HeaderNav/HeaderNav';
+import HamburgerButton from '../../atoms/HamburgerButton/HamburgerButton';
 import AppContext from '../../../context/context';
 
 const StyledHeader = styled.header`
@@ -18,14 +20,16 @@ const StyledHeader = styled.header`
   }
 
   @media (max-width: 768px) {
-    padding: 0 40px;
+    padding: 0 20px;
+    grid-template-columns: 50px 150px 1fr 52px;
   }
 `;
 
 const Header = () => (
       
       <StyledHeader>
-        <h3>A-Bogdol</h3>
+        <HamburgerButton />
+        <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/"><h3>A-Bogdol</h3></Link>
         <HeaderNav />
         <AppContext.Consumer>
           {(context) => 

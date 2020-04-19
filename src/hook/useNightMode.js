@@ -17,7 +17,7 @@ const toggleTheme = () => {
 
   useEffect(()=> {
   const localMode = window.localStorage.getItem('nightMode');
-  setNightMode(JSON.parse(localMode));
+  false && setNightMode(JSON.parse(localMode));
 
 
   }, []);

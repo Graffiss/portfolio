@@ -26,11 +26,26 @@ const StyledProject = styled.div`
   img {
     height: 290px;
     width: 390px;
+
+    @media (max-width: 768px) {
+  height: 145px;
+  width: 195px;
+  }
   }
 
   h1 {
     color: ${({ theme }) => theme.text};
+    
+    @media (max-width: 768px) {
+      font-size: 24px;
   }
+  }
+
+  @media (max-width: 768px) {
+height: 300px;
+width: 320px;
+
+}
 `;
 
 class ProjectCard extends React.Component {

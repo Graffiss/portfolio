@@ -21,7 +21,7 @@ const StyledMainTemplate = styled.div`
 
   @media (max-width: 768px) {
     grid-template-rows: 70px 1fr 70px;
-
+    grid-gap: 0;
   }
 
 `;

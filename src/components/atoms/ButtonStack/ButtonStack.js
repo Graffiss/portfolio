@@ -18,11 +18,19 @@ const ButtonStack = styled.button`
     border: 3px solid ${({ theme }) => theme.darkRed};
     background-image: none;
 
+    @media (max-width: 768px) {
+      box-shadow: 4px 4px 0 ${({ theme }) => theme.darkRed};
+  }
+
     &:before {
       content: attr(data-content);
       color: ${({ theme }) => theme.lightRed};
       font-weight: 600;
       font-size: 25px;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+  }
     }
   }
 

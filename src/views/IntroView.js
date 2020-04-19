@@ -62,7 +62,6 @@ const StyledIntro = styled.div`
 
   @media (max-width: 768px) {
     align-items: center;
-
         }
 
   div {
@@ -72,7 +71,6 @@ const StyledIntro = styled.div`
     margin-bottom: 40px;
     @media (max-width: 768px) {
       align-items: center;
-
 
         }
 

@@ -19,6 +19,14 @@ const StyledWrapper = styled.div`
     font-weight: 300;
     font-size: 30px;
     margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+  }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 0;
   }
 `;
 
