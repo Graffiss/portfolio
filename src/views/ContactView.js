@@ -79,7 +79,7 @@ const ContactView = () => (
         return errors;
       }}
       onSubmit={
-        (values) => {
+        (values, {formReset}) => {
           fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -88,6 +88,7 @@ const ContactView = () => (
             .then(() => alert("Success!"))
             .catch(error => alert(error));
             console.log(values);
+            formReset();
       }
     }
     >
