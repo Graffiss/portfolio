@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 import { useNightMode } from '../hook/useNightMode';
@@ -6,6 +6,7 @@ import AppContext from '../context/context';
 import GlobalStyle from '../theme/GlobalStyle';
 import { lightTheme, darkTheme } from '../theme/theme';
 import StyledGridTemplate from './StyledGridTemplate';
+import HamburgerMenu from '../components/organisms/HamburgerMenu/HamburgerMenu';
 
 const StyledMainTemplate = styled.div`
   display: grid;
@@ -29,17 +30,21 @@ const StyledMainTemplate = styled.div`
 const MainTemplate = ({ children }) => {
   const [nightMode, toggleTheme] = useNightMode();
   const themeMode = nightMode === false ? lightTheme : darkTheme;
+  const [burgerMenuOpen, setBurgerMenuOpen] = useState(false);
+  const toggleBurgerMenu = () => setBurgerMenuOpen(!burgerMenuOpen);
 
   const contextElements = {
     nightMode,
-    toggleTheme
+    toggleTheme,
+    toggleBurgerMenu
   }
 
   return (
     <AppContext.Provider value={contextElements}>
     <StyledMainTemplate>
       <ThemeProvider theme={themeMode}>
-        {children}
+      {children}
+      { burgerMenuOpen && <HamburgerMenu /> }
         <GlobalStyle />
         <StyledGridTemplate />
       </ThemeProvider>

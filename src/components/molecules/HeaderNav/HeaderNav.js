@@ -30,6 +30,7 @@ const StyledNavItems = styled(NavLink)`
 
   @media (max-width: 1150px) {
     display:none;
+
   }
 `;
 

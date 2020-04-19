@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import AppContext from '../../../context/context';
 
 const StyledHamburgerButton = styled.button`
     border: none;
@@ -24,11 +25,13 @@ const StyledSpan = styled.span`
 `;
 
 const HamburgerButton = () => (
-    <StyledHamburgerButton>
+    <AppContext.Consumer>{(context) =>
+    <StyledHamburgerButton onClick={context.toggleBurgerMenu}>
         <StyledSpan/>
         <StyledSpan/>
         <StyledSpan/>
-    </StyledHamburgerButton>
+    </StyledHamburgerButton>}
+    </AppContext.Consumer>
 )
 
 export default HamburgerButton;

@@ -26,9 +26,8 @@ const StyledHeader = styled.header`
 `;
 
 const Header = () => (
-      
       <StyledHeader>
-        <HamburgerButton />
+        <HamburgerButton/>
         <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/"><h3>A-Bogdol</h3></Link>
         <HeaderNav />
         <AppContext.Consumer>
@@ -49,6 +48,6 @@ const Header = () => (
         />}
         </AppContext.Consumer>
       </StyledHeader>
-    );
+      );
 
 export default Header;
