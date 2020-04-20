@@ -116,7 +116,7 @@ const ContactView = () => (
           <StyledTextarea onChange={handleChange} onBlur={handleBlur} type="textarea" name="message" placeholder="Wpisz treść wiadomości..." value={values.message}/>
           <ErrorMessage name="message" component="div" />
           <Button type="submit" disabled={isSubmitting}>
-            wyślę
+            wyślij
           </Button>
         </StyledForm>
       )}
