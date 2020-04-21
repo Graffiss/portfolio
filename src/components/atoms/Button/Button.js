@@ -18,6 +18,7 @@ const Button = styled.button`
   text-transform: uppercase;
   cursor: pointer;
   letter-spacing: 2px;
+  outline: none;
 
   :hover {
     transform: translateY(-3px);
@@ -31,7 +32,7 @@ const Button = styled.button`
       font-size: 32px;
     `}
 
-    @media (max-width: 768px) {
+  @media (max-width: 768px) {
     width: 160px;
     height: 50px;
     font-size: 16px;

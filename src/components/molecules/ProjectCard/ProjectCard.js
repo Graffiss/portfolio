@@ -23,29 +23,34 @@ const StyledProject = styled.div`
     background-image: none;
   }
 
+  @media (max-width: 768px) {
+    border-radius: 30px;
+  }
+
   img {
     height: 290px;
     width: 390px;
+    border-radius: 20px;
 
     @media (max-width: 768px) {
-  height: 145px;
-  width: 195px;
-  }
+      height: 145px;
+      width: 195px;
+      border-radius: 10px;
+    }
   }
 
   h1 {
     color: ${({ theme }) => theme.text};
-    
+
     @media (max-width: 768px) {
       font-size: 24px;
-  }
+    }
   }
 
   @media (max-width: 768px) {
-height: 300px;
-width: 320px;
-
-}
+    height: 300px;
+    width: 320px;
+  }
 `;
 
 class ProjectCard extends React.Component {

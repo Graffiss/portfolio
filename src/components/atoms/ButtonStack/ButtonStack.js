@@ -11,6 +11,7 @@ const ButtonStack = styled.button`
   background-color: ${({ theme }) => theme.body};
   border: 3px solid ${({ theme }) => theme.lightRed};
   border-radius: 50px;
+  outline: none;
 
   &:hover {
     border: 3px solid ${({ theme }) => theme.darkRed};
@@ -20,7 +21,7 @@ const ButtonStack = styled.button`
 
     @media (max-width: 768px) {
       box-shadow: 4px 4px 0 ${({ theme }) => theme.darkRed};
-  }
+    }
 
     &:before {
       content: attr(data-content);
@@ -30,7 +31,7 @@ const ButtonStack = styled.button`
 
       @media (max-width: 768px) {
         font-size: 14px;
-  }
+      }
     }
   }
 
@@ -38,7 +39,6 @@ const ButtonStack = styled.button`
     width: 100px;
     height: 100px;
   }
-
 `;
 
 export default ButtonStack;
