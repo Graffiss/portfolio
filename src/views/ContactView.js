@@ -71,18 +71,14 @@ const StyledTextarea = styled.textarea`
 
 const encode = (data) => {
   return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-}
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
 
 const ContactView = () => (
   <StyledWrapper>
     <Formik
-      initialValues={{ "bot-field": "",
-      "form-name": "contact",
-      email: '',
-      title: '',
-      message: '' }}
+      initialValues={{ 'bot-field': '', 'form-name': 'contact', email: '', title: '', message: '' }}
       validate={(values) => {
         const errors = {};
         if (!values.email) {
@@ -92,28 +88,47 @@ const ContactView = () => (
         }
         return errors;
       }}
-      onSubmit={
-        (values, {resetForm}) => {
-          fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", ...values })
-          })
-            .then(() => alert("Success!"))
-            .catch(error => alert(error));
-            resetForm();
-      }
-    }
+      onSubmit={(values, { resetForm }) => {
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: encode({ 'form-name': 'contact', ...values }),
+        })
+          .then(() => alert('Success!'))
+          .catch((error) => alert(error));
+        resetForm();
+      }}
     >
       {({ values, handleBlur, handleSubmit, handleChange, isSubmitting }) => (
         <StyledForm onSubmit={handleSubmit}>
           <Field type="hidden" name="bot-field" />
           <Field type="hidden" name="form-name" />
-          <StyledInput onChange={handleChange} onBlur={handleBlur} type="email" name="email" placeholder="Email" value={values.email}/>
+          <StyledInput
+            onChange={handleChange}
+            onBlur={handleBlur}
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={values.email}
+          />
           <ErrorMessage name="email" component="div" />
-          <StyledInput onChange={handleChange} onBlur={handleBlur} type="text" name="title" placeholder="Tytuł wiadomości" value={values.title}/>
+          <StyledInput
+            onChange={handleChange}
+            onBlur={handleBlur}
+            type="text"
+            name="title"
+            placeholder="Tytuł wiadomości"
+            value={values.title}
+          />
           <ErrorMessage name="text" component="div" />
-          <StyledTextarea onChange={handleChange} onBlur={handleBlur} type="textarea" name="message" placeholder="Wpisz treść wiadomości..." value={values.message}/>
+          <StyledTextarea
+            onChange={handleChange}
+            onBlur={handleBlur}
+            type="textarea"
+            name="message"
+            placeholder="Wpisz treść wiadomości..."
+            value={values.message}
+          />
           <ErrorMessage name="message" component="div" />
           <Button type="submit" disabled={isSubmitting}>
             wyślij

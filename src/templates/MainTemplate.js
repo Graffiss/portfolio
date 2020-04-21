@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 import { useNightMode } from '../hook/useNightMode';
@@ -24,7 +24,6 @@ const StyledMainTemplate = styled.div`
     grid-template-rows: 70px 1fr 70px;
     grid-gap: 0;
   }
-
 `;
 
 const MainTemplate = ({ children }) => {
@@ -36,19 +35,19 @@ const MainTemplate = ({ children }) => {
   const contextElements = {
     nightMode,
     toggleTheme,
-    toggleBurgerMenu
-  }
+    toggleBurgerMenu,
+  };
 
   return (
     <AppContext.Provider value={contextElements}>
-    <StyledMainTemplate>
-      <ThemeProvider theme={themeMode}>
-      {children}
-      { burgerMenuOpen && <HamburgerMenu /> }
-        <GlobalStyle />
-        <StyledGridTemplate />
-      </ThemeProvider>
-    </StyledMainTemplate>
+      <StyledMainTemplate>
+        <ThemeProvider theme={themeMode}>
+          {children}
+          {burgerMenuOpen && <HamburgerMenu />}
+          <GlobalStyle />
+          <StyledGridTemplate />
+        </ThemeProvider>
+      </StyledMainTemplate>
     </AppContext.Provider>
   );
 };

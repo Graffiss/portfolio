@@ -45,9 +45,13 @@ const StyledLetter = styled.div`
       left: 0;
     }
 
+    @media (max-width: 1460px) {
+      font-size: 80vh;
+    }
+
     @media (max-width: 1024px) {
-      font-size: 50vh;
-      }
+      font-size: 70vh;
+    }
   }
   @media (max-width: 768px) {
     display: none;
@@ -62,7 +66,7 @@ const StyledIntro = styled.div`
 
   @media (max-width: 768px) {
     align-items: center;
-        }
+  }
 
   div {
     display: flex;
@@ -71,8 +75,7 @@ const StyledIntro = styled.div`
     margin-bottom: 40px;
     @media (max-width: 768px) {
       align-items: center;
-
-        }
+    }
 
     h1 {
       color: ${({ theme }) => theme.text};
@@ -83,7 +86,7 @@ const StyledIntro = styled.div`
       @media (max-width: 768px) {
         text-align: center;
         font-size: 78px;
-        }
+      }
     }
 
     h3 {
@@ -95,8 +98,7 @@ const StyledIntro = styled.div`
       @media (max-width: 768px) {
         text-align: center;
         font-size: 30px;
-        }
-
+      }
     }
   }
 `;
