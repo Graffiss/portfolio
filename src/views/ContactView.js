@@ -71,7 +71,7 @@ const StyledTextarea = styled.textarea`
 
 const encode = (data) => {
   return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .map((key) => `${encodeURIComponent(key)} = ${encodeURIComponent(data[key])}`)
     .join('&');
 };
 
@@ -94,8 +94,8 @@ const ContactView = () => (
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: encode({ 'form-name': 'contact', ...values }),
         })
-          .then(() => alert('Success!'))
-          .catch((error) => alert(error));
+          .then(() => console.log('Formularz został wysłany'))
+          .catch((error) => console.log(error));
         resetForm();
       }}
     >

@@ -51,14 +51,14 @@ const StyledParagraph = styled.p`
 `;
 
 const StyledImage = styled.img`
-  height: 400px;
-  width: 538px;
+  height: 406px;
+  width: 750px;
   border-radius: 25px;
   border: 3px solid ${({ theme }) => theme.darkRed};
 
   @media (max-width: 768px) {
-    height: 145px;
-    width: 195px;
+    height: 116px;
+    width: 215px;
     border-radius: 10px;
   }
 `;

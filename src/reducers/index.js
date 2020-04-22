@@ -26,16 +26,8 @@ const initialState = {
   ],
 };
 
-const rootReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case 'REMOVE_ITEM':
-      return {
-        ...state,
-        projects: [...state.filter((item) => item.id !== action.payload.id)],
-      };
-    default:
-      return state;
-  }
+const rootReducer = (state = initialState) => {
+  return state;
 };
 
 export default rootReducer;
