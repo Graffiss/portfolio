@@ -56,6 +56,12 @@ const StyledImage = styled.img`
   border-radius: 25px;
   border: 3px solid ${({ theme }) => theme.darkRed};
 
+  @media (max-width: 1100px) {
+    height: 271px;
+    width: 500px;
+    border-radius: 10px;
+  }
+
   @media (max-width: 768px) {
     height: 116px;
     width: 215px;

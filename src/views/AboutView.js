@@ -27,10 +27,10 @@ const StyledPicture = styled.div`
     border: 15px solid ${({ theme }) => theme.lightRed};
 
     @media (max-width: 768px) {
-    height: 200px;
-    width: 200px;
-    border: 8px solid ${({ theme }) => theme.lightRed};
-  }
+      height: 200px;
+      width: 200px;
+      border: 8px solid ${({ theme }) => theme.lightRed};
+    }
   }
 `;
 
@@ -48,9 +48,9 @@ const StyledText = styled.div`
     font-weight: 600;
 
     @media (max-width: 768px) {
-    font-size: 28px;
-    text-align: center;
-  }
+      font-size: 28px;
+      text-align: center;
+    }
   }
 
   p {
@@ -60,14 +60,14 @@ const StyledText = styled.div`
     padding-top: 30px;
 
     @media (max-width: 768px) {
-    font-size:16px;
-    padding-top: 15px;
-  }
+      font-size: 16px;
+      padding-top: 15px;
+    }
   }
 
   @media (max-width: 768px) {
-  align-items: center;
-  padding-left: 0;
+    align-items: center;
+    padding-left: 0;
   }
 `;
 
@@ -79,12 +79,14 @@ const AboutView = () => (
     <StyledText>
       <h2>Andrzej Bogdoł</h2>
       <p>
-        Pierwsze doświadczenia w czytaniu kodu JavaScript zbierałem pracując jako Web Analityk w
-        różnych działach marketingu.
+        Pierwsze doświadczenia w czytaniu kodu JavaScript zbierałem pracując jako{' '}
+        <b>Web Analityk</b> w różnych działach marketingu (od małej agencji, przez start-up, aż do
+        korporacji).
       </p>
       <p>
-        Na przestrzeni lat bardziej zainteresowała mnie część dotycząca kodu, niż analizy danych.
-        Zagłębiając się w technologie front-endowe najbardziej wciągnął mnie React{' '}
+        Na przestrzeni lat bardziej zainteresowała mnie część dotycząca kodu, niż samego marketingu,
+        więc postanowiłem zagłębić się w technologie front-endowe, gdzie <b>React</b> stał się moim
+        głównym narzędziem pracy.
       </p>
     </StyledText>
   </StyledWrapper>
