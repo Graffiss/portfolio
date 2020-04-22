@@ -71,15 +71,9 @@ const StyledTextarea = styled.textarea`
 
 const encode = (data) => {
   return Object.keys(data)
-<<<<<<< HEAD
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-}
-=======
     .map((key) => `${encodeURIComponent(key)} = ${encodeURIComponent(data[key])}`)
     .join('&');
 };
->>>>>>> origin
 
 const ContactView = () => (
   <StyledWrapper>
@@ -94,21 +88,6 @@ const ContactView = () => (
         }
         return errors;
       }}
-<<<<<<< HEAD
-      onSubmit={
-        (values, {resetForm}) => {
-          fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", ...values })
-          })
-            .then(() => alert("Success!"))
-            .catch(error => alert(error));
-            console.log(values);
-            resetForm();
-      }
-    }
-=======
       onSubmit={(values, { resetForm }) => {
         fetch('/', {
           method: 'POST',
@@ -119,19 +98,11 @@ const ContactView = () => (
           .catch((error) => console.log(error));
         resetForm();
       }}
->>>>>>> origin
     >
       {({ values, handleBlur, handleSubmit, handleChange, isSubmitting }) => (
         <StyledForm onSubmit={handleSubmit}>
           <Field type="hidden" name="bot-field" />
           <Field type="hidden" name="form-name" />
-<<<<<<< HEAD
-          <StyledInput onChange={handleChange} onBlur={handleBlur} type="email" name="email" placeholder="Email" value={values.email}/>
-          <ErrorMessage name="email" component="div" />
-          <StyledInput onChange={handleChange} onBlur={handleBlur} type="text" name="title" placeholder="Tytuł wiadomości" value={values.title}/>
-          <ErrorMessage name="text" component="div" />
-          <StyledTextarea onChange={handleChange} onBlur={handleBlur} type="textarea" name="message" placeholder="Wpisz treść wiadomości..." value={values.message}/>
-=======
           <StyledInput
             onChange={handleChange}
             onBlur={handleBlur}
@@ -158,7 +129,6 @@ const ContactView = () => (
             placeholder="Wpisz treść wiadomości..."
             value={values.message}
           />
->>>>>>> origin
           <ErrorMessage name="message" component="div" />
           <Button type="submit" disabled={isSubmitting}>
             wyślij
