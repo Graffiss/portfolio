@@ -36,6 +36,9 @@ const StyledGrid = styled.footer`
       justify-content: flex-end;
       align-items: center;
       padding-right: 90px;
+
+      @media (max-width: 768px) {
+        padding-right: 20px;  }
     }
 
     &.footerBottom {

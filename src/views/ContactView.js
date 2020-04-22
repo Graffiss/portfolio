@@ -10,6 +10,10 @@ const StyledWrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: 0 100px;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
 `;
 
 const StyledForm = styled(Form)`
@@ -34,6 +38,12 @@ const StyledInput = styled.input`
   ::placeholder {
     color: white;
   }
+
+  @media (max-width: 768px) {
+    width: 340px;
+    height: 50px;
+    font-size: 16px;
+  }
 `;
 
 const StyledTextarea = styled.textarea`
@@ -53,22 +63,28 @@ const StyledTextarea = styled.textarea`
   ::placeholder {
     color: white;
   }
+  @media (max-width: 768px) {
+    width: 340px;
+    font-size: 16px;
+  }
 `;
 
 const encode = (data) => {
   return Object.keys(data)
+<<<<<<< HEAD
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&");
 }
+=======
+    .map((key) => `${encodeURIComponent(key)} = ${encodeURIComponent(data[key])}`)
+    .join('&');
+};
+>>>>>>> origin
 
 const ContactView = () => (
   <StyledWrapper>
     <Formik
-      initialValues={{ "bot-field": "",
-      "form-name": "contact",
-      email: '',
-      title: '',
-      message: '' }}
+      initialValues={{ 'bot-field': '', 'form-name': 'contact', email: '', title: '', message: '' }}
       validate={(values) => {
         const errors = {};
         if (!values.email) {
@@ -78,6 +94,7 @@ const ContactView = () => (
         }
         return errors;
       }}
+<<<<<<< HEAD
       onSubmit={
         (values, {resetForm}) => {
           fetch("/", {
@@ -91,16 +108,57 @@ const ContactView = () => (
             resetForm();
       }
     }
+=======
+      onSubmit={(values, { resetForm }) => {
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: encode({ 'form-name': 'contact', ...values }),
+        })
+          .then(() => console.log('Formularz został wysłany'))
+          .catch((error) => console.log(error));
+        resetForm();
+      }}
+>>>>>>> origin
     >
       {({ values, handleBlur, handleSubmit, handleChange, isSubmitting }) => (
         <StyledForm onSubmit={handleSubmit}>
           <Field type="hidden" name="bot-field" />
           <Field type="hidden" name="form-name" />
+<<<<<<< HEAD
           <StyledInput onChange={handleChange} onBlur={handleBlur} type="email" name="email" placeholder="Email" value={values.email}/>
           <ErrorMessage name="email" component="div" />
           <StyledInput onChange={handleChange} onBlur={handleBlur} type="text" name="title" placeholder="Tytuł wiadomości" value={values.title}/>
           <ErrorMessage name="text" component="div" />
           <StyledTextarea onChange={handleChange} onBlur={handleBlur} type="textarea" name="message" placeholder="Wpisz treść wiadomości..." value={values.message}/>
+=======
+          <StyledInput
+            onChange={handleChange}
+            onBlur={handleBlur}
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={values.email}
+          />
+          <ErrorMessage name="email" component="div" />
+          <StyledInput
+            onChange={handleChange}
+            onBlur={handleBlur}
+            type="text"
+            name="title"
+            placeholder="Tytuł wiadomości"
+            value={values.title}
+          />
+          <ErrorMessage name="text" component="div" />
+          <StyledTextarea
+            onChange={handleChange}
+            onBlur={handleBlur}
+            type="textarea"
+            name="message"
+            placeholder="Wpisz treść wiadomości..."
+            value={values.message}
+          />
+>>>>>>> origin
           <ErrorMessage name="message" component="div" />
           <Button type="submit" disabled={isSubmitting}>
             wyślij

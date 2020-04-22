@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ButtonList from '../components/organisms/StackList/StackList';
+import StackList from '../components/organisms/StackList/StackList';
 
 const StyledWrapper = styled.div`
   grid-area: content;
@@ -8,6 +8,9 @@ const StyledWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 768px) {
+    padding: 20px 20px;
+  }
 `;
 
 const StyledGrid = styled.div`
@@ -27,7 +30,7 @@ const StyledGrid = styled.div`
 const StackView = () => (
   <StyledWrapper>
     <StyledGrid>
-      <ButtonList />
+      <StackList />
     </StyledGrid>
   </StyledWrapper>
 );

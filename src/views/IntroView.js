@@ -8,6 +8,11 @@ const StyledWrapper = styled.div`
   display: flex;
   align-items: center;
   padding: 0 100px;
+
+  @media (max-width: 768px) {
+    padding: 0;
+    justify-content: center;
+  }
 `;
 
 const StyledLetter = styled.div`
@@ -39,6 +44,17 @@ const StyledLetter = styled.div`
       top: 78%;
       left: 0;
     }
+
+    @media (max-width: 1460px) {
+      font-size: 80vh;
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 70vh;
+    }
+  }
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 
@@ -48,17 +64,29 @@ const StyledIntro = styled.div`
   flex-direction: column;
   align-items: flex-end;
 
+  @media (max-width: 768px) {
+    align-items: center;
+  }
+
   div {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin-bottom: 40px;
+    @media (max-width: 768px) {
+      align-items: center;
+    }
 
     h1 {
       color: ${({ theme }) => theme.text};
       font-weight: 600;
       font-size: 90px;
       text-align: right;
+
+      @media (max-width: 768px) {
+        text-align: center;
+        font-size: 78px;
+      }
     }
 
     h3 {
@@ -66,6 +94,11 @@ const StyledIntro = styled.div`
       font-weight: 300;
       font-size: 55px;
       text-align: right;
+
+      @media (max-width: 768px) {
+        text-align: center;
+        font-size: 30px;
+      }
     }
   }
 `;

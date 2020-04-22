@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 
 import styled from 'styled-components';
@@ -23,13 +24,33 @@ const StyledProject = styled.div`
     background-image: none;
   }
 
+  @media (max-width: 768px) {
+    border-radius: 30px;
+  }
+
   img {
-    height: 290px;
-    width: 390px;
+    height: 271px;
+    width: 500px;
+    border-radius: 20px;
+
+    @media (max-width: 768px) {
+      height: 106px;
+      width: 195px;
+      border-radius: 10px;
+    }
   }
 
   h1 {
     color: ${({ theme }) => theme.text};
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 300px;
+    width: 320px;
   }
 `;
 
@@ -58,5 +79,11 @@ class ProjectCard extends React.Component {
     );
   }
 }
+
+ProjectCard.propTypes = {
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+};
 
 export default ProjectCard;
