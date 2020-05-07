@@ -39,9 +39,8 @@ const initialState = {
       id: 3,
       image: urlBuilderPhoto,
       title: 'URL Builder',
-      desc: `Projekt domowej spiżarni jest oparty o design w Material.UI. Spiżarnia pozwala sprawdzić stan
-      produktów dostępnych w domu, a wszelkie aktualizacje zapisują się w localStorage. Zakładka "Lista zakupów"
-      aktualizuje się automatycznie, gdy ilość produktów równa jest minimalnej ilości, jaką ustawiliśmy.`,
+      desc: `Projekt kreatora linków na potrzeby działu marketingu w firmie X-Trade Brokers. Oparty na znanym narzędziu od Google, z tą różnicą, że wymusza wybranie odgónie ustalonych wartości
+      w pozycjach: utm_source oraz utm_medium`,
       stack: ['react', 'styled.components'],
       github: 'https://github.com/Graffiss/utm-builder',
       demo: 'https://xtb-utm-builder.netlify.app/',
@@ -50,10 +49,7 @@ const initialState = {
       id: 4,
       image: organicMarketPhoto,
       title: 'Organic Food Market',
-      desc: `Sklep ecommerce ze zdrową żywnością. 
-                                              Logowanie do inwentarza dzięki autoryzacji w Firebase. 
-                                              W planach jest dodanie bloga opartego o Gatsby oraz przeniesienie całego stanu 
-                                              do Reduxa`,
+      desc: `Sklep ecommerce ze zdrową żywnością. Logowanie do inwentarza dzięki autoryzacji w Firebase. W planach jest dodanie bloga opartego o Gatsby oraz przeniesienie całego stanu do Reduxa`,
       stack: ['react', 'redux', 'gatsby', 'graphql'],
       github: 'https://github.com/Graffiss/organic-food-market',
       demo: 'https://organic-food-market.netlify.app/',
