@@ -17,7 +17,7 @@ const StyledMainTemplate = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: 100px 1fr 100px;
   grid-gap: 10px;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 
   @media (max-width: 768px) {
