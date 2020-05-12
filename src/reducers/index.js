@@ -1,13 +1,13 @@
 import organicMarketPhoto from '../assets/images/projects/organic-food-market-project.png';
-import portfolioPhoto from '../assets/images/projects/portfolio-project.png';
-import homePantryPhoto from '../assets/images/projects/home-pantry.png';
+import portfolioGif from '../assets/gifs/projects/portfolio.gif';
+import homePantryGif from '../assets/gifs/projects/home-pantry.gif';
 import urlBuilderPhoto from '../assets/images/projects/url-builder.png';
 
 const initialState = {
   projects: [
     {
       id: 1,
-      image: portfolioPhoto,
+      image: portfolioGif,
       title: 'Portfolio',
       desc: `Portfolio oparte o interfejs Reactowy wraz z hookami oraz prostym storem w Reduxie.
       Dla podziału plików zastosowano Atomic Design, a warstwą graficzną projektu zajmuje się styled.components.
@@ -26,7 +26,7 @@ const initialState = {
     },
     {
       id: 2,
-      image: homePantryPhoto,
+      image: homePantryGif,
       title: 'Domowa spiżarnia',
       desc: `Projekt domowej spiżarni jest oparty o design w Material.UI. Spiżarnia pozwala sprawdzić stan
       produktów dostępnych w domu, a wszelkie aktualizacje zapisują się w localStorage. Zakładka "Lista zakupów"
