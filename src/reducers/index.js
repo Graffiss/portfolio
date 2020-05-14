@@ -1,6 +1,7 @@
 import organicMarketPhoto from '../assets/images/projects/organic-food-market-project.png';
 import portfolioGif from '../assets/gifs/projects/portfolio.gif';
 import homePantryGif from '../assets/gifs/projects/home-pantry.gif';
+import hangmanGif from '../assets/gifs/projects/hangman-game.gif';
 import urlBuilderPhoto from '../assets/images/projects/url-builder.png';
 
 const initialState = {
@@ -37,6 +38,16 @@ const initialState = {
     },
     {
       id: 3,
+      image: hangmanGif,
+      title: 'Hangman Game',
+      desc: `Jedno ze starych zadań rekrutacyjnych w Netguru: gra w wisielca. Sterowanie za pomocą klawiatury.
+      Baza słów do odgadnięcia zaczytywana jest z WordsAPI. Spróbuj odgadnąć miasto w Europie, zanim zawiśniesz na dobre!`,
+      stack: ['react', 'styled.components', 'API', 'hooks'],
+      github: 'https://github.com/Graffiss/hangman-game',
+      demo: 'https://hangman-game-recruitment-task.netlify.app/',
+    },
+    {
+      id: 4,
       image: urlBuilderPhoto,
       title: 'URL Builder',
       desc: `Projekt kreatora linków na potrzeby działu marketingu w firmie X-Trade Brokers. Oparty na znanym narzędziu od Google, z tą różnicą, że wymusza wybranie odgónie ustalonych wartości
@@ -46,7 +57,7 @@ const initialState = {
       demo: 'https://xtb-utm-builder.netlify.app/',
     },
     {
-      id: 4,
+      id: 5,
       image: organicMarketPhoto,
       title: 'Organic Food Market',
       desc: `Sklep ecommerce ze zdrową żywnością. Logowanie do inwentarza dzięki autoryzacji w Firebase. W planach jest dodanie bloga opartego o Gatsby oraz przeniesienie całego stanu do Reduxa`,
