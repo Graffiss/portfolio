@@ -2,7 +2,6 @@ import organicMarketPhoto from '../assets/images/projects/organic-food-market-pr
 import portfolioGif from '../assets/gifs/projects/portfolio.gif';
 import homePantryGif from '../assets/gifs/projects/home-pantry.gif';
 import hangmanGif from '../assets/gifs/projects/hangman-game.gif';
-import urlBuilderPhoto from '../assets/images/projects/url-builder.png';
 
 const initialState = {
   projects: [
@@ -48,16 +47,6 @@ const initialState = {
     },
     {
       id: 4,
-      image: urlBuilderPhoto,
-      title: 'URL Builder',
-      desc: `Projekt kreatora linków na potrzeby działu marketingu w firmie X-Trade Brokers. Oparty na znanym narzędziu od Google, z tą różnicą, że wymusza wybranie odgónie ustalonych wartości
-      w pozycjach: utm_source oraz utm_medium`,
-      stack: ['react', 'styled.components'],
-      github: 'https://github.com/Graffiss/utm-builder',
-      demo: 'https://xtb-utm-builder.netlify.app/',
-    },
-    {
-      id: 5,
       image: organicMarketPhoto,
       title: 'Organic Food Market',
       desc: `Sklep ecommerce ze zdrową żywnością. Logowanie do inwentarza dzięki autoryzacji w Firebase. W planach jest dodanie bloga opartego o Gatsby oraz przeniesienie całego stanu do Reduxa`,
