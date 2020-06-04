@@ -22,7 +22,7 @@ const StyledHeader = styled.header`
     font-size: 30px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1100px) {
     padding: 0 20px;
     grid-template-columns: 50px 1fr 52px;
     grid-template-areas: 'burger logo toggle';
@@ -42,7 +42,7 @@ const Header = () => {
   };
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 768px)');
+    const mediaQuery = window.matchMedia('(max-width: 1100px)');
     mediaQuery.addListener(handleMediaQueryChange);
     handleMediaQueryChange(mediaQuery);
 

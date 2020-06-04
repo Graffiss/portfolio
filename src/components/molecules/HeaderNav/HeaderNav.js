@@ -20,7 +20,7 @@ const StyledLinksList = styled.ul`
   flex-wrap: wrap;
   list-style: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1100px) {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -44,7 +44,7 @@ const StyledNavItems = styled(NavLink)`
     display: initial;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1100px) {
     margin: 0;
     font-size: 36px;
   }

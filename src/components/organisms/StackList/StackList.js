@@ -44,7 +44,7 @@ class StackList extends Component {
         name: 'npm',
         icon: npmIcon,
       },
-      /*  {
+      {
         id: 7,
         name: 'Firebase',
         icon: firebaseIcon,
@@ -63,7 +63,7 @@ class StackList extends Component {
         id: 10,
         name: 'Jest',
         icon: jestIcon,
-      }, */
+      },
     ],
   };
 
