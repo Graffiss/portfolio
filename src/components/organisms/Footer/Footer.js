@@ -38,7 +38,8 @@ const StyledGrid = styled.footer`
       padding-right: 90px;
 
       @media (max-width: 768px) {
-        padding-right: 20px;  }
+        padding-right: 20px;
+      }
     }
 
     &.footerBottom {
@@ -57,12 +58,14 @@ const Footer = () => (
         href="https://github.com/Graffiss"
         target="_blank"
         rel="noopener noreferrer"
+        alt="GitHub portfolio"
       />
       <ButtonIcon
         icon={linkedinIcon}
         href="https://www.linkedin.com/in/andrzej-bogdo%C5%82/"
         target="_blank"
         rel="noopener noreferrer"
+        alt="LinkedIn profile"
       />
     </div>
     <div className="footerBottom" />

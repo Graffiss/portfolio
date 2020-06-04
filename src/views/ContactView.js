@@ -122,6 +122,7 @@ const ContactView = () => (
           />
           <ErrorMessage name="text" component="div" />
           <StyledTextarea
+            id="message"
             onChange={handleChange}
             onBlur={handleBlur}
             type="textarea"
