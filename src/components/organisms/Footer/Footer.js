@@ -59,6 +59,7 @@ const Footer = () => (
         target="_blank"
         rel="noopener noreferrer"
         alt="GitHub portfolio"
+        aria-label="Github portfolio"
       />
       <ButtonIcon
         icon={linkedinIcon}
@@ -66,6 +67,7 @@ const Footer = () => (
         target="_blank"
         rel="noopener noreferrer"
         alt="LinkedIn profile"
+        aria-label="Linkedin profile"
       />
     </div>
     <div className="footerBottom" />

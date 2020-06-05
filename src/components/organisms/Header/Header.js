@@ -81,6 +81,7 @@ const Header = () => {
                 base: 'rgb(158,43,53)',
               },
             }}
+            inactiveLabelStyle={{ color: 'white' }}
             value={context.nightMode}
             onToggle={context.toggleTheme}
           />
