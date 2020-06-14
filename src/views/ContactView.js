@@ -103,7 +103,9 @@ const ContactView = () => (
         <StyledForm onSubmit={handleSubmit}>
           <Field type="hidden" name="bot-field" />
           <Field type="hidden" name="form-name" />
+          <label htmlFor="email">Adres email</label>
           <StyledInput
+            id="email"
             onChange={handleChange}
             onBlur={handleBlur}
             type="email"
@@ -112,7 +114,9 @@ const ContactView = () => (
             value={values.email}
           />
           <ErrorMessage name="email" component="div" />
+          <label htmlFor="title">Tytuł wiadomości</label>
           <StyledInput
+            id="title"
             onChange={handleChange}
             onBlur={handleBlur}
             type="text"
@@ -121,6 +125,7 @@ const ContactView = () => (
             value={values.title}
           />
           <ErrorMessage name="text" component="div" />
+          <label htmlFor="message">Treść wiadomości</label>
           <StyledTextarea
             id="message"
             onChange={handleChange}
