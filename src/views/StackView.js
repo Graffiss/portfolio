@@ -20,10 +20,13 @@ const StyledGrid = styled.div`
 
   @media (max-width: 1500px) {
     grid-gap: 45px;
-    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 1300px) {
+    grid-template-columns: repeat(4, 1fr);
   }
   @media (max-width: 1100px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 

@@ -27,7 +27,7 @@ const StyledLetter = styled.div`
     text-shadow: 10px 5px ${({ theme }) => theme.darkRed};
     color: ${({ theme }) => theme.lightRed};
     position: absolute;
-    bottom: -450px;
+    bottom: -50vh;
     z-index: -1;
     padding: 0;
     margin: 0;

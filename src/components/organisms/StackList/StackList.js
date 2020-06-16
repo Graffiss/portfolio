@@ -5,7 +5,7 @@ import reduxIcon from '../../../assets/icons/simple-icons_redux.svg';
 import javascriptIcon from '../../../assets/icons/simple-icons_javascript.svg';
 import styledIcon from '../../../assets/icons/styled-components.svg';
 import gitIcon from '../../../assets/icons/git.svg';
-import npmIcon from '../../../assets/icons/npm.svg';
+import typescriptIcon from '../../../assets/icons/typescript.svg';
 import firebaseIcon from '../../../assets/icons/firebase.svg';
 import gatsbyIcon from '../../../assets/icons/gatsby.svg';
 import graphqlIcon from '../../../assets/icons/graphql.svg';
@@ -41,8 +41,8 @@ class StackList extends Component {
       },
       {
         id: 6,
-        name: 'npm',
-        icon: npmIcon,
+        name: 'TypeScript',
+        icon: typescriptIcon,
       },
       {
         id: 7,
