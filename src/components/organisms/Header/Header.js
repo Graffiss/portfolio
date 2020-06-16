@@ -70,21 +70,27 @@ const Header = () => {
       </CSSTransition>
       <AppContext.Consumer>
         {(context) => (
-          <ToggleButton
-            inactiveLabel="Dzień"
-            activeLabel="Noc"
-            colors={{
-              active: {
-                base: 'rgb(79,77,87)',
-              },
-              inactive: {
-                base: 'rgb(158,43,53)',
-              },
-            }}
-            inactiveLabelStyle={{ color: 'white' }}
-            value={context.nightMode}
-            onToggle={context.toggleTheme}
-          />
+          <>
+            <label style={{ display: 'none' }} htmlFor="toggle">
+              Toggle button for day/night mode
+            </label>
+            <ToggleButton
+              id="toggle"
+              inactiveLabel="Dzień"
+              activeLabel="Noc"
+              colors={{
+                active: {
+                  base: 'rgb(79,77,87)',
+                },
+                inactive: {
+                  base: 'rgb(158,43,53)',
+                },
+              }}
+              inactiveLabelStyle={{ color: 'white' }}
+              value={context.nightMode}
+              onToggle={context.toggleTheme}
+            />
+          </>
         )}
       </AppContext.Consumer>
     </StyledHeader>
