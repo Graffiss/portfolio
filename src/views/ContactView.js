@@ -1,7 +1,7 @@
-import React from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import styled from 'styled-components';
-import Button from '../components/atoms/Button/Button';
+import React from "react"
+import { Formik, Form, Field, ErrorMessage } from "formik"
+import styled from "styled-components"
+import Button from "../components/atoms/button/button.styled"
 
 const StyledWrapper = styled.div`
   grid-area: content;
@@ -18,13 +18,13 @@ const StyledWrapper = styled.div`
   @media (max-width: 768px) {
     padding: 0 20px;
   }
-`;
+`
 
 const StyledForm = styled(Form)`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
+`
 
 const StyledInput = styled.input`
   background-color: rgba(219, 51, 64, 0.8);
@@ -35,7 +35,7 @@ const StyledInput = styled.input`
   margin-bottom: 20px;
   color: white;
   font-size: 18px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 300;
   padding-left: 20px;
 
@@ -48,7 +48,7 @@ const StyledInput = styled.input`
     height: 50px;
     font-size: 16px;
   }
-`;
+`
 
 const StyledTextarea = styled.textarea`
   background-color: rgba(219, 51, 64, 0.8);
@@ -59,7 +59,7 @@ const StyledTextarea = styled.textarea`
   margin-bottom: 20px;
   color: white;
   font-size: 18px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 300;
   padding-left: 20px;
   padding-top: 20px;
@@ -71,36 +71,44 @@ const StyledTextarea = styled.textarea`
     width: 340px;
     font-size: 16px;
   }
-`;
+`
 
 const encode = (data) => {
   return Object.keys(data)
     .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-    .join('&');
-};
+    .join("&")
+}
 
 const ContactView = () => (
   <StyledWrapper>
     <Formik
-      initialValues={{ 'bot-field': '', 'form-name': 'contact', email: '', title: '', message: '' }}
+      initialValues={{
+        "bot-field": "",
+        "form-name": "contact",
+        email: "",
+        title: "",
+        message: "",
+      }}
       validate={(values) => {
-        const errors = {};
+        const errors = {}
         if (!values.email) {
-          errors.email = 'Pole wymagane';
-        } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-          errors.email = 'Nieprawidłowy adres email';
+          errors.email = "Pole wymagane"
+        } else if (
+          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+        ) {
+          errors.email = "Nieprawidłowy adres email"
         }
-        return errors;
+        return errors
       }}
       onSubmit={(values, { resetForm }) => {
-        fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: encode({ 'form-name': 'contact', ...values }),
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "contact", ...values }),
         })
-          .then(() => console.log('Form has been sent'))
-          .catch((error) => console.log(error));
-        resetForm();
+          .then(() => console.log("Form has been sent"))
+          .catch((error) => console.log(error))
+        resetForm()
       }}
     >
       {({ values, handleBlur, handleSubmit, handleChange, isSubmitting }) => (
@@ -147,6 +155,6 @@ const ContactView = () => (
       )}
     </Formik>
   </StyledWrapper>
-);
+)
 
-export default ContactView;
+export default ContactView

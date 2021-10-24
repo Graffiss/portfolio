@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import StackList from '../components/organisms/StackList/StackList';
+import React from "react"
+import styled from "styled-components"
+import StackList from "../components/organisms/stack-list/stack-list.component"
 
 const StyledWrapper = styled.div`
   grid-area: content;
@@ -11,7 +11,7 @@ const StyledWrapper = styled.div`
   @media (max-width: 768px) {
     padding: 20px 20px;
   }
-`;
+`
 
 const StyledGrid = styled.div`
   display: grid;
@@ -28,7 +28,7 @@ const StyledGrid = styled.div`
   @media (max-width: 1100px) {
     grid-template-columns: repeat(2, 1fr);
   }
-`;
+`
 
 const StackView = () => (
   <StyledWrapper>
@@ -36,6 +36,6 @@ const StackView = () => (
       <StackList />
     </StyledGrid>
   </StyledWrapper>
-);
+)
 
-export default StackView;
+export default StackView

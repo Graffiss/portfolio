@@ -1,9 +1,9 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import Button from '../components/atoms/Button/Button';
-import ProjectCard from '../components/molecules/ProjectCard/ProjectCard';
+import React from "react"
+import { connect } from "react-redux"
+import PropTypes from "prop-types"
+import styled from "styled-components"
+import Button from "../components/atoms/button/button.styled"
+import ProjectCard from "../components/molecules/project-card/project-card.component"
 
 const StyledWrapper = styled.div`
   grid-area: content;
@@ -28,7 +28,7 @@ const StyledWrapper = styled.div`
   @media (max-width: 768px) {
     padding: 20px 0;
   }
-`;
+`
 
 const StyledProjectWrapper = styled.div`
   display: flex;
@@ -36,13 +36,20 @@ const StyledProjectWrapper = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   padding-bottom: 20px;
-`;
+`
 
 const ProjectView = ({ projects }) => (
   <StyledWrapper>
     <StyledProjectWrapper>
       {projects.map(({ id, image, title, desc, stack }) => (
-        <ProjectCard key={id} id={id} image={image} title={title} desc={desc} stack={stack} />
+        <ProjectCard
+          key={id}
+          id={id}
+          image={image}
+          title={title}
+          desc={desc}
+          stack={stack}
+        />
       ))}
     </StyledProjectWrapper>
 
@@ -50,7 +57,7 @@ const ProjectView = ({ projects }) => (
 
     <Button>
       <a
-        style={{ color: 'inherit', textDecoration: 'inherit' }}
+        style={{ color: "inherit", textDecoration: "inherit" }}
         href="https://github.com/Graffiss"
         target="_blank"
         rel="noopener noreferrer"
@@ -59,7 +66,7 @@ const ProjectView = ({ projects }) => (
       </a>
     </Button>
   </StyledWrapper>
-);
+)
 
 ProjectView.propTypes = {
   projects: PropTypes.arrayOf(
@@ -71,14 +78,14 @@ ProjectView.propTypes = {
       stack: PropTypes.array,
       github: PropTypes.string.isRequired,
       demo: PropTypes.string.isRequired,
-    }),
+    })
   ),
-};
+}
 
 ProjectView.defaultProps = {
   projects: [],
-};
+}
 
-const mapStateToProps = ({ projects }) => ({ projects });
+const mapStateToProps = ({ projects }) => ({ projects })
 
-export default connect(mapStateToProps)(ProjectView);
+export default connect(mapStateToProps)(ProjectView)

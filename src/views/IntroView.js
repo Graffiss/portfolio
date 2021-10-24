@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import Button from '../components/atoms/Button/Button';
+import React from "react"
+import styled from "styled-components"
+import { Link } from "react-router-dom"
+import Button from "../components/atoms/button/button.styled"
 
 const StyledWrapper = styled.div`
   grid-area: content;
@@ -13,7 +13,7 @@ const StyledWrapper = styled.div`
     padding: 0;
     justify-content: center;
   }
-`;
+`
 
 const StyledLetter = styled.div`
   flex: 1;
@@ -22,7 +22,7 @@ const StyledLetter = styled.div`
   justify-content: center;
   position: relative;
   p {
-    font-family: 'Abril Fatface';
+    font-family: "Abril Fatface";
     font-size: 90vh;
     text-shadow: 10px 5px ${({ theme }) => theme.darkRed};
     color: ${({ theme }) => theme.lightRed};
@@ -34,7 +34,7 @@ const StyledLetter = styled.div`
 
     ::after {
       position: absolute;
-      content: '';
+      content: "";
       display: block;
       width: 120%;
       height: 54px;
@@ -56,7 +56,7 @@ const StyledLetter = styled.div`
   @media (max-width: 768px) {
     display: none;
   }
-`;
+`
 
 const StyledIntro = styled.div`
   flex: 1;
@@ -101,7 +101,7 @@ const StyledIntro = styled.div`
       }
     }
   }
-`;
+`
 
 const IntroView = () => (
   <StyledWrapper>
@@ -113,11 +113,14 @@ const IntroView = () => (
         <h1>Andrzej Bogdoł</h1>
         <h3>React Developer</h3>
       </div>
-      <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/projects">
+      <Link
+        style={{ color: "inherit", textDecoration: "inherit" }}
+        to="/projects"
+      >
         <Button big>Projects</Button>
       </Link>
     </StyledIntro>
   </StyledWrapper>
-);
+)
 
-export default IntroView;
+export default IntroView

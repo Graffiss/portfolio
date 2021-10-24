@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import Button from '../components/atoms/Button/Button';
-import ProjectDetailsTemplate from '../templates/ProjectDetailsTemplate';
+import React from "react"
+import { Link } from "react-router-dom"
+import { connect } from "react-redux"
+import PropTypes from "prop-types"
+import styled from "styled-components"
+import Button from "../components/atoms/button/button.styled"
+import ProjectDetailsTemplate from "../templates/project-details.template/project-details"
 
 const StyledWrapper = styled.div`
   grid-area: content;
@@ -13,10 +13,10 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
+`
 
 const ProjectDetailsView = ({ activeItem }) => {
-  const [item] = activeItem;
+  const [item] = activeItem
 
   return (
     <StyledWrapper>
@@ -29,21 +29,26 @@ const ProjectDetailsView = ({ activeItem }) => {
         demo={item.demo}
       />
 
-      <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/projects">
+      <Link
+        style={{ color: "inherit", textDecoration: "inherit" }}
+        to="/projects"
+      >
         <Button>Back</Button>
       </Link>
     </StyledWrapper>
-  );
-};
+  )
+}
 
 ProjectDetailsView.propTypes = {
   activeItem: PropTypes.arrayOf(Object).isRequired,
-};
+}
 
 const mapStateToProps = ({ projects }, ownProps) => {
   return {
-    activeItem: projects.filter((item) => item.id === JSON.parse(ownProps.match.params.id)),
-  };
-};
+    activeItem: projects.filter(
+      (item) => item.id === JSON.parse(ownProps.match.params.id)
+    ),
+  }
+}
 
-export default connect(mapStateToProps)(ProjectDetailsView);
+export default connect(mapStateToProps)(ProjectDetailsView)
