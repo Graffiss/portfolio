@@ -76,8 +76,8 @@ const Header = () => {
             </label>
             <ToggleButton
               id="toggle"
-              inactiveLabel="Dzień"
-              activeLabel="Noc"
+              inactiveLabel="Day"
+              activeLabel="Night"
               colors={{
                 active: {
                   base: 'rgb(79,77,87)',

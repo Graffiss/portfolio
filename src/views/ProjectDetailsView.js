@@ -29,8 +29,8 @@ const ProjectDetailsView = ({ activeItem }) => {
         demo={item.demo}
       />
 
-      <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/projekty">
-        <Button>Powrót</Button>
+      <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/projects">
+        <Button>Back</Button>
       </Link>
     </StyledWrapper>
   );

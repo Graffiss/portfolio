@@ -59,8 +59,8 @@ const HeaderNav = () => (
         </StyledNavItems>
       </li>
       <li>
-        <StyledNavItems as={NavLink} to="/projekty" activeClassName="active">
-          Projekty
+        <StyledNavItems as={NavLink} to="/projects" activeClassName="active">
+          Projects
         </StyledNavItems>
       </li>
       <li>
@@ -69,13 +69,13 @@ const HeaderNav = () => (
         </StyledNavItems>
       </li>
       <li>
-        <StyledNavItems as={NavLink} to="/o-mnie" activeClassName="active">
-          O mnie
+        <StyledNavItems as={NavLink} to="/about" activeClassName="active">
+          About
         </StyledNavItems>
       </li>
       <li>
-        <StyledNavItems as={NavLink} to="/kontakt" activeClassName="active">
-          Kontakt
+        <StyledNavItems as={NavLink} to="/contact" activeClassName="active">
+          Contact
         </StyledNavItems>
       </li>
     </StyledLinksList>

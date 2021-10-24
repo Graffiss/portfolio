@@ -46,7 +46,7 @@ const ProjectView = ({ projects }) => (
       ))}
     </StyledProjectWrapper>
 
-    <p>Pozostałe projekty:</p>
+    <p>Other projects:</p>
 
     <Button>
       <a

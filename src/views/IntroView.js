@@ -113,8 +113,8 @@ const IntroView = () => (
         <h1>Andrzej Bogdoł</h1>
         <h3>React Developer</h3>
       </div>
-      <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/projekty">
-        <Button big>Projekty</Button>
+      <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/projects">
+        <Button big>Projects</Button>
       </Link>
     </StyledIntro>
   </StyledWrapper>
