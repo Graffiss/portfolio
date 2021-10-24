@@ -68,13 +68,13 @@ class ProjectCard extends React.Component {
     const { id, title, image } = this.props;
 
     if (redirect) {
-      return <Redirect to={`/projekty/${id}`} />;
+      return <Redirect to={`/projects/${id}`} />;
     }
     return (
       <StyledProject>
         <h1>{title}</h1>
         <img src={image} alt={title} />
-        <Button onClick={this.handleClick}>Sprawdź</Button>
+        <Button onClick={this.handleClick}>Check it out</Button>
       </StyledProject>
     );
   }

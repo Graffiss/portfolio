@@ -19,11 +19,11 @@ const Root = () => (
         <Header />
         <Switch>
           <Route exact path="/" component={IntroView} />
-          <Route exact path="/projekty" component={ProjectsView} />
-          <Route path="/projekty/:id" component={ProjectDetailsView} />
+          <Route exact path="/projects" component={ProjectsView} />
+          <Route path="/projects/:id" component={ProjectDetailsView} />
           <Route path="/stack" component={StackView} />
-          <Route path="/o-mnie" component={AboutView} />
-          <Route path="/kontakt" component={ContactView} />
+          <Route path="/about" component={AboutView} />
+          <Route path="/contact" component={ContactView} />
         </Switch>
         <Footer />
       </MainTemplate>

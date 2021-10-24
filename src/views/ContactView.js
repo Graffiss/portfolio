@@ -98,7 +98,7 @@ const ContactView = () => (
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: encode({ 'form-name': 'contact', ...values }),
         })
-          .then(() => console.log('Formularz został wysłany'))
+          .then(() => console.log('Form has been sent'))
           .catch((error) => console.log(error));
         resetForm();
       }}
@@ -107,7 +107,7 @@ const ContactView = () => (
         <StyledForm onSubmit={handleSubmit}>
           <Field type="hidden" name="bot-field" />
           <Field type="hidden" name="form-name" />
-          <label htmlFor="email">Adres email</label>
+          <label htmlFor="email">Email address</label>
           <StyledInput
             id="email"
             onChange={handleChange}
@@ -118,30 +118,30 @@ const ContactView = () => (
             value={values.email}
           />
           <ErrorMessage name="email" component="div" />
-          <label htmlFor="title">Tytuł wiadomości</label>
+          <label htmlFor="title">Message title</label>
           <StyledInput
             id="title"
             onChange={handleChange}
             onBlur={handleBlur}
             type="text"
             name="title"
-            placeholder="Tytuł wiadomości"
+            placeholder="Message title"
             value={values.title}
           />
           <ErrorMessage name="text" component="div" />
-          <label htmlFor="message">Treść wiadomości</label>
+          <label htmlFor="message">Your message</label>
           <StyledTextarea
             id="message"
             onChange={handleChange}
             onBlur={handleBlur}
             type="textarea"
             name="message"
-            placeholder="Wpisz treść wiadomości..."
+            placeholder="Type your message here..."
             value={values.message}
           />
           <ErrorMessage name="message" component="div" />
           <Button type="submit" disabled={isSubmitting}>
-            wyślij
+            Send
           </Button>
         </StyledForm>
       )}

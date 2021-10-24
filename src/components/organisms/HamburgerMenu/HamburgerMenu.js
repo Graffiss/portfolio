@@ -24,7 +24,7 @@ const HamburgerMenu = () => (
   <StyledMenu>
     <HeaderNav />
     <AppContext.Consumer>
-      {(context) => <Button onClick={context.toggleBurgerMenu}>Zamknij</Button>}
+      {(context) => <Button onClick={context.toggleBurgerMenu}>Close</Button>}
     </AppContext.Consumer>
   </StyledMenu>
 );

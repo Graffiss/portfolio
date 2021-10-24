@@ -79,14 +79,14 @@ const AboutView = () => (
     <StyledText>
       <h2>Andrzej Bogdoł</h2>
       <p>
-        Pierwsze doświadczenia w czytaniu kodu JavaScript zbierałem pracując jako{' '}
-        <b>Web Analityk</b> w różnych działach marketingu (od małej agencji, przez start-up, aż do
-        korporacji).
+        I gathered my first experience with reading JavaScript code while working as{' '}
+        <b>Web Analyst</b> in various marketing departments (from small marketing agencies, through
+        start-ups, up to big corporations).
       </p>
       <p>
-        Na przestrzeni lat bardziej zainteresowała mnie część dotycząca kodu, niż samego marketingu,
-        więc postanowiłem zagłębić się w technologie front-endowe, gdzie <b>React</b> stał się moim
-        głównym narzędziem pracy.
+        Over the years I became more interested in the code itself, rather than in marketing, so I
+        decided to make a career switch and dive deep into front-end technologies, where{' '}
+        <b>React</b> became my main working tool.
       </p>
     </StyledText>
   </StyledWrapper>
