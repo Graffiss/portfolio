@@ -1,12 +1,14 @@
-# Andrzej Bogdoł - strona portfolio
+# Andrzej Bogdoł - portfolio
 
-Portfolio oparte o interfejs Reactowy wraz z hookami oraz prostym storem w Reduxie. Dla podziału plików zastosowano Atomic Design, a warstwą graficzną projektu zajmuje się styled.components. ThemeProvider został wykorzystany do użycia trybu Dzień-Noc (zapisywany w localStorage), ContextAPI do przenoszenia funkcji między komponentami.
+Portfolio based on react with hooks and simple Redux store.
+The Atomic Design has been used for file storage, with styled-components as CSS-in-JS styling solution.
+ThemeProvider has been used for Day/Night modes (saved in localStorage) and ContextAPI for using functions between different components
 
-## Zastosowane rozwiązania
+## Applied solutions
 
-- Redux jako globalny stan aplikacji
-- zapisywanie "night mode" do localStorage
-- Formik jako formularz kontaktowy, połączony bezpośrednio z Netlify Forms
+- Redux as global application state
+- saving "night mode" into localStorage
+- Formik as main form, directly connected into Netlify Forms
 - Progressive Web App
-- Zoptymalizowana pod audyt Google Lighthouse
+- Optimized for Google Lighthouse audit
 - Atomic Design
