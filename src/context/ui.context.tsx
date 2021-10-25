@@ -63,7 +63,7 @@ export const UIProvider: FC = (props) => {
       closeBurgerMenu,
       toggleBurgerMenu,
     }),
-    [state]
+    [state, openBurgerMenu, closeBurgerMenu, toggleBurgerMenu]
   )
 
   return <UIContext.Provider value={value} {...props} />
