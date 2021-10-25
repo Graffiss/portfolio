@@ -1,8 +1,6 @@
-import React from "react"
 import styled from "styled-components"
-import StackList from "../components/organisms/stack-list/stack-list.component"
 
-const StyledWrapper = styled.div`
+export const StyledWrapper = styled.div`
   grid-area: content;
   padding: 20px 80px;
   display: flex;
@@ -13,7 +11,7 @@ const StyledWrapper = styled.div`
   }
 `
 
-const StyledGrid = styled.div`
+export const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 85px;
@@ -29,13 +27,3 @@ const StyledGrid = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
 `
-
-const StackView = () => (
-  <StyledWrapper>
-    <StyledGrid>
-      <StackList />
-    </StyledGrid>
-  </StyledWrapper>
-)
-
-export default StackView

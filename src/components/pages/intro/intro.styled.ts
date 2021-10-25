@@ -1,9 +1,6 @@
-import React from "react"
 import styled from "styled-components"
-import { Link } from "react-router-dom"
-import Button from "../components/atoms/button/button.styled"
 
-const StyledWrapper = styled.div`
+export const StyledWrapper = styled.div`
   grid-area: content;
   display: flex;
   align-items: center;
@@ -15,7 +12,7 @@ const StyledWrapper = styled.div`
   }
 `
 
-const StyledLetter = styled.div`
+export const StyledLetter = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
@@ -58,7 +55,7 @@ const StyledLetter = styled.div`
   }
 `
 
-const StyledIntro = styled.div`
+export const StyledIntro = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -102,25 +99,3 @@ const StyledIntro = styled.div`
     }
   }
 `
-
-const IntroView = () => (
-  <StyledWrapper>
-    <StyledLetter>
-      <p>A</p>
-    </StyledLetter>
-    <StyledIntro>
-      <div>
-        <h1>Andrzej Bogdoł</h1>
-        <h3>React Developer</h3>
-      </div>
-      <Link
-        style={{ color: "inherit", textDecoration: "inherit" }}
-        to="/projects"
-      >
-        <Button big>Projects</Button>
-      </Link>
-    </StyledIntro>
-  </StyledWrapper>
-)
-
-export default IntroView

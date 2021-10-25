@@ -1,4 +1,5 @@
 import React, { FC } from "react"
+import { Project } from "reducers/reducer.interface"
 import Button from "../../components/atoms/button/button.styled"
 import {
   StyledButtons,
@@ -9,7 +10,13 @@ import {
   StyledWrapper,
 } from "./project-details.styled"
 
-const ProjectDetailsTemplate: FC = ({ title, image, desc, github, demo }) => {
+const ProjectDetailsTemplate: FC<Project> = ({
+  title,
+  image,
+  desc,
+  github,
+  demo,
+}) => {
   return (
     <StyledWrapper>
       <StyledFlex>

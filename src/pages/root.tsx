@@ -5,12 +5,12 @@ import store from "../store"
 import MainTemplate from "../templates/main-template/main.template"
 import Header from "../components/organisms/header/header.component"
 import Footer from "../components/organisms/footer/footer.component"
-import ContactView from "./ContactView"
-import StackView from "./StackView"
-import ProjectsView from "./ProjectsView"
-import IntroView from "./IntroView"
-import AboutView from "./AboutView"
-import ProjectDetailsView from "./ProjectDetailsView"
+import ContactPage from "./contact"
+import StackPage from "./stack"
+import ProjectsPage from "./projects"
+import IntroPage from "./intro"
+import AboutPage from "./about"
+import ProjectDetailsPage from "./project-details"
 import { ManagedUIContext } from "context/ui.context"
 
 const Root = () => (
@@ -20,12 +20,12 @@ const Root = () => (
         <MainTemplate>
           <Header />
           <Switch>
-            <Route exact path="/" component={IntroView} />
-            <Route exact path="/projects" component={ProjectsView} />
-            <Route path="/projects/:id" component={ProjectDetailsView} />
-            <Route path="/stack" component={StackView} />
-            <Route path="/about" component={AboutView} />
-            <Route path="/contact" component={ContactView} />
+            <Route exact path="/" component={IntroPage} />
+            <Route exact path="/projects" component={ProjectsPage} />
+            <Route path="/projects/:id" component={ProjectDetailsPage} />
+            <Route path="/stack" component={StackPage} />
+            <Route path="/about" component={AboutPage} />
+            <Route path="/contact" component={ContactPage} />
           </Switch>
           <Footer />
         </MainTemplate>

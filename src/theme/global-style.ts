@@ -1,6 +1,7 @@
-import { createGlobalStyle, GlobalStyleComponent } from "styled-components"
+import { createGlobalStyle } from "styled-components"
+import { Theme } from "./theme"
 
-const GlobalStyle = createGlobalStyle<GlobalStyleComponent>`
+const GlobalStyle = createGlobalStyle`
 
     *, *::before, *::after {
         margin: 0;
@@ -16,7 +17,7 @@ const GlobalStyle = createGlobalStyle<GlobalStyleComponent>`
 
     body {
         font-size: 1.6rem;
-        background-color: ${({ theme }) => theme.body};
+        background-color: ${({ theme }: { theme: Theme }) => theme.body};
         font-family: 'Montserrat', sans-serif;
         
     }

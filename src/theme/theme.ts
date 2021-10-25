@@ -19,3 +19,5 @@ export const darkTheme = {
   boxBorder: "#4F4D57",
   boxShadow: "#9E2B35",
 }
+
+export type Theme = typeof lightTheme | typeof lightTheme

@@ -1,8 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import aboutPicture from '../assets/images/about/andrzej-bogdol-black-white.jpg';
+import styled from "styled-components"
 
-const StyledWrapper = styled.div`
+export const StyledWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 20px 80px;
@@ -11,9 +9,9 @@ const StyledWrapper = styled.div`
     flex-direction: column;
     padding: 20px 20px;
   }
-`;
+`
 
-const StyledPicture = styled.div`
+export const StyledPicture = styled.div`
   flex: 1;
   display: flex;
   justify-content: center;
@@ -32,9 +30,9 @@ const StyledPicture = styled.div`
       border: 8px solid ${({ theme }) => theme.lightRed};
     }
   }
-`;
+`
 
-const StyledText = styled.div`
+export const StyledText = styled.div`
   flex: 1.5;
   display: flex;
   flex-direction: column;
@@ -69,27 +67,4 @@ const StyledText = styled.div`
     align-items: center;
     padding-left: 0;
   }
-`;
-
-const AboutView = () => (
-  <StyledWrapper>
-    <StyledPicture>
-      <img src={aboutPicture} alt="Andrzej Bogdoł" />
-    </StyledPicture>
-    <StyledText>
-      <h2>Andrzej Bogdoł</h2>
-      <p>
-        I gathered my first experience with reading JavaScript code while working as{' '}
-        <b>Web Analyst</b> in various marketing departments (from small marketing agencies, through
-        start-ups, up to big corporations).
-      </p>
-      <p>
-        Over the years I became more interested in the code itself, rather than in marketing, so I
-        decided to make a career switch and dive deep into front-end technologies, where{' '}
-        <b>React</b> became my main working tool.
-      </p>
-    </StyledText>
-  </StyledWrapper>
-);
-
-export default AboutView;
+`

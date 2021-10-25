@@ -9,10 +9,12 @@ import { StyledHeader } from "./header.styled"
 
 const Header: FC = () => {
   const [nightMode, toggleTheme] = useNightMode()
-  const [isNavVisible, setNavVisibility] = useState(false)
+  const [isNavVisible] = useState(false)
   const [isSmallScreen, setIsSmallScreen] = useState(false)
 
-  const handleMediaQueryChange = (mediaQuery) => {
+  const handleMediaQueryChange = (
+    mediaQuery: MediaQueryListEvent | MediaQueryList
+  ) => {
     if (mediaQuery.matches) {
       setIsSmallScreen(true)
     } else {
@@ -30,12 +32,12 @@ const Header: FC = () => {
     }
   }, [])
 
-  const toggleNav = () => {
-    setNavVisibility(!isNavVisible)
-  }
+  // const toggleNav = () => {
+  //   setNavVisibility(!isNavVisible)
+  // }
   return (
     <StyledHeader>
-      <HamburgerButton onClick={toggleNav} />
+      <HamburgerButton />
       <Link style={{ color: "inherit", textDecoration: "inherit" }} to="/">
         <h3>A-Bogdol</h3>
       </Link>
