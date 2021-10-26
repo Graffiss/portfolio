@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import { FC } from "react"
 import { Link } from "react-router-dom"
 import { RouteComponentProps } from "react-router"
 import { connect } from "react-redux"
@@ -13,7 +13,7 @@ interface MatchParams {
   id: string
 }
 
-interface MatchProps extends RouteComponentProps<MatchParams> {}
+// interface MatchProps extends RouteComponentProps<MatchParams> {}
 
 const ProjectDetailsPage: FC<ProjectDetailsPageState> = ({ activeItem }) => {
   const [{ title, demo, desc, github, image, stack }] = activeItem
@@ -39,7 +39,10 @@ const ProjectDetailsPage: FC<ProjectDetailsPageState> = ({ activeItem }) => {
   )
 }
 
-const mapStateToProps = ({ projects }: ProjectsState, ownProps: MatchProps) => {
+const mapStateToProps = (
+  { projects }: ProjectsState,
+  ownProps: RouteComponentProps<MatchParams>
+) => {
   return {
     activeItem: projects.filter(
       (item) => item.id === JSON.parse(ownProps.match.params.id)

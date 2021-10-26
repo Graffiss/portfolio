@@ -1,5 +1,5 @@
-import { useNightMode } from "hook/useNightMode.hook"
-import React, { FC, useEffect, useState } from "react"
+import { FC, useEffect, useState } from "react"
+import { useUI } from "context/ui.context"
 import { Link } from "react-router-dom"
 import ToggleButton from "react-toggle-button"
 import { CSSTransition } from "react-transition-group"
@@ -8,7 +8,7 @@ import HeaderNav from "../../molecules/header-nav/header-nav.component"
 import { StyledHeader } from "./header.styled"
 
 const Header: FC = () => {
-  const [nightMode, toggleTheme] = useNightMode()
+  const { nightMode, toggleTheme } = useUI()
   const [isNavVisible] = useState(false)
   const [isSmallScreen, setIsSmallScreen] = useState(false)
 
@@ -21,7 +21,6 @@ const Header: FC = () => {
       setIsSmallScreen(false)
     }
   }
-
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 1100px)")
     mediaQuery.addListener(handleMediaQueryChange)
@@ -32,9 +31,6 @@ const Header: FC = () => {
     }
   }, [])
 
-  // const toggleNav = () => {
-  //   setNavVisibility(!isNavVisible)
-  // }
   return (
     <StyledHeader>
       <HamburgerButton />

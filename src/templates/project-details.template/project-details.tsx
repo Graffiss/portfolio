@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import { FC } from "react"
 import { Project } from "reducers/reducer.interface"
 import Button from "../../components/atoms/button/button.styled"
 import {

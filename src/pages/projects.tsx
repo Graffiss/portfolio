@@ -1,4 +1,3 @@
-import React from "react"
 import { connect } from "react-redux"
 import Button from "../components/atoms/button/button.styled"
 import ProjectCard from "../components/molecules/project-card/project-card.component"

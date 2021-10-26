@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import { FC } from "react"
 import { useUI } from "../../../context/ui.context"
 import { StyledHamburgerButton, StyledSpan } from "./hamburger-button.styled"
 

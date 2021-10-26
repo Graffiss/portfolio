@@ -1,4 +1,12 @@
-import React, { createContext, FC, useCallback, useMemo } from "react"
+import {
+  useContext,
+  useReducer,
+  createContext,
+  FC,
+  useCallback,
+  useMemo,
+} from "react"
+import { useNightMode } from "hook/useNightMode.hook"
 
 export interface State {
   displayBurgerMenu: boolean
@@ -36,7 +44,8 @@ function uiReducer(state: State, action: Action) {
 }
 
 export const UIProvider: FC = (props) => {
-  const [state, dispatch] = React.useReducer(uiReducer, initialState)
+  const [state, dispatch] = useReducer(uiReducer, initialState)
+  const [nightMode, toggleTheme] = useNightMode()
 
   const openBurgerMenu = useCallback(
     () => dispatch({ type: "OPEN_BURGER_MENU" }),
@@ -62,15 +71,24 @@ export const UIProvider: FC = (props) => {
       openBurgerMenu,
       closeBurgerMenu,
       toggleBurgerMenu,
+      nightMode,
+      toggleTheme,
     }),
-    [state, openBurgerMenu, closeBurgerMenu, toggleBurgerMenu]
+    [
+      state,
+      openBurgerMenu,
+      closeBurgerMenu,
+      toggleBurgerMenu,
+      nightMode,
+      toggleTheme,
+    ]
   )
 
   return <UIContext.Provider value={value} {...props} />
 }
 
 export const useUI = () => {
-  const context = React.useContext(UIContext)
+  const context = useContext(UIContext)
   if (context === undefined) {
     throw new Error(`useUI must be used within a UIProvider`)
   }

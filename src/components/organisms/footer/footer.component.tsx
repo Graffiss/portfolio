@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import { FC } from "react"
 import ButtonIcon from "../../atoms/button-icon/button-icon.styled"
 import githubIcon from "../../../assets/icons/simple-icons_github.svg"
 import linkedinIcon from "../../../assets/icons/simple-icons_linkedin.svg"

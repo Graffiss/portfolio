@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react"
+import { FC, useState } from "react"
 import { Redirect } from "react-router-dom"
 import { Project } from "reducers/reducer.interface"
 import Button from "../../atoms/button/button.styled"

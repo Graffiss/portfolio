@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import { FC } from "react"
 import ButtonStack from "../../atoms/button-stack/button-stack.styled"
 import { stack } from "./stack-list.constant"
 

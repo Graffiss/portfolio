@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const StyledMainTemplate = styled.div`
+export const MainLayout = styled.div`
   display: grid;
   grid-template-areas:
     "header"
