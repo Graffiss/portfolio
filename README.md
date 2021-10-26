@@ -7,7 +7,7 @@ ThemeProvider has been used for Day/Night modes (saved in localStorage) and Cont
 ## Applied solutions
 
 - Redux as global application state
-- saving "night mode" into localStorage
+- Saving "night mode" into localStorage
 - Formik as main form, directly connected into Netlify Forms
 - Progressive Web App
 - Optimized for Google Lighthouse audit
