@@ -1,22 +1,32 @@
 import styled from "styled-components"
 
 export const StyledWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 430px 1fr;
+  max-width: 1400px;
   padding: 20px 80px;
 
-  @media (max-width: 767px) {
-    flex-direction: column;
+  @media (min-width: 1101px) {
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+  }
+
+  @media (max-width: 1100px) {
+    grid-template-columns: 1fr;
     padding: 20px 20px;
   }
 `
 
 export const StyledPicture = styled.div`
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
+  padding-bottom: 20px;
+
+  @media (min-width: 1101px) {
+    padding-top: 20px;
+  }
 
   img {
     height: 400px;
@@ -25,19 +35,21 @@ export const StyledPicture = styled.div`
     border: 15px solid ${({ theme }) => theme.lightRed};
 
     @media (max-width: 768px) {
+      height: 300px;
+      width: 300px;
+      border: 8px solid ${({ theme }) => theme.lightRed};
+    }
+
+    @media (max-width: 430px) {
       height: 200px;
       width: 200px;
-      border: 8px solid ${({ theme }) => theme.lightRed};
     }
   }
 `
 
 export const StyledText = styled.div`
-  flex: 1.5;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   padding-left: 30px;
 
   h2 {
@@ -63,7 +75,12 @@ export const StyledText = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 1101px) {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  @media (max-width: 1100px) {
     align-items: center;
     padding-left: 0;
   }

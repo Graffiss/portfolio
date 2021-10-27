@@ -1,14 +1,14 @@
 import styled from "styled-components"
 
 export const StyledWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
-  padding: 20px 80px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1068px) {
+    grid-template-columns: 1fr;
     padding: 20px 0;
   }
 `
@@ -35,7 +35,7 @@ export const StyledParagraph = styled.p`
   color: ${({ theme }) => theme.text};
   font-size: 24px;
   font-weight: 300;
-  padding-bottom: 30px;
+  padding: 0px 20px 30px 20px;
   text-align: center;
 
   @media (max-width: 768px) {
@@ -49,13 +49,13 @@ export const StyledImage = styled.img`
   border-radius: 25px;
   border: 3px solid ${({ theme }) => theme.darkRed};
 
-  @media (max-width: 1100px) {
+  @media (max-width: 1260px) {
     height: 271px;
     width: 500px;
     border-radius: 10px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     height: 116px;
     width: 215px;
     border-radius: 10px;

@@ -1,6 +1,7 @@
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
-const ButtonStack = styled.button<{ icon?: string }>`
+const ButtonStack = styled(motion.button)<{ icon?: string }>`
   display: block;
   width: 200px;
   height: 200px;

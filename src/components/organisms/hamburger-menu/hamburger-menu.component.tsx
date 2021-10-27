@@ -1,16 +1,35 @@
-import { FC } from "react"
+import { StyledNavItems } from "components/molecules/header-nav/header-nav.styled"
+import { navigation } from "constants/navigation"
 import { useUI } from "context/ui.context"
-import Button from "../../atoms/button/button.styled"
-import HeaderNav from "../../molecules/header-nav/header-nav.component"
-import { StyledMenu } from "./hamburger-menu.styled"
+import { FC, useEffect, useState } from "react"
+import { NavLink } from "react-router-dom"
+import { LinksList, StyledMenu } from "./hamburger-menu.styled"
 
 const HamburgerMenu: FC = () => {
-  const { closeBurgerMenu } = useUI()
+  const { closeBurgerMenu, displayBurgerMenu } = useUI()
+  const [openedMenu, setOpenedMenu] = useState(false)
+
+  useEffect(() => {
+    displayBurgerMenu ? setOpenedMenu(true) : setOpenedMenu(false)
+  }, [displayBurgerMenu])
 
   return (
-    <StyledMenu>
-      <HeaderNav />
-      <Button onClick={closeBurgerMenu}>Close</Button>
+    <StyledMenu opened={openedMenu}>
+      <LinksList>
+        {navigation.map(({ path, displayName }, index) => (
+          <li key={index}>
+            <StyledNavItems
+              as={NavLink}
+              to={path}
+              activeClassName="active"
+              exact={path === "/"}
+              onClick={closeBurgerMenu}
+            >
+              {displayName}
+            </StyledNavItems>
+          </li>
+        ))}
+      </LinksList>
     </StyledMenu>
   )
 }

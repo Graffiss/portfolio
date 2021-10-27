@@ -15,7 +15,7 @@ export const StyledHeader = styled.header`
     font-size: 30px;
   }
 
-  @media (max-width: 1100px) {
+  @media (max-width: 900px) {
     padding: 0 20px;
     grid-template-columns: 50px 1fr 52px;
     grid-template-areas: "burger logo toggle";
