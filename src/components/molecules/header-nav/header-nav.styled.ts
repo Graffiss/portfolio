@@ -15,21 +15,14 @@ export const StyledWrapper = styled.nav`
     transition: transform 250ms ease-in-out;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
+    display: none;
   }
 `
 export const StyledLinksList = styled.ul`
   display: flex;
-  flex-wrap: wrap;
   list-style: none;
   justify-content: center;
-
-  @media (max-width: 1100px) {
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-end;
-  }
 `
 export const StyledNavItems = styled(NavLink)`
   margin-right: 50px;
@@ -59,11 +52,7 @@ export const StyledNavItems = styled(NavLink)`
   }
 
   @media (max-width: 1150px) {
-    display: initial;
-  }
-
-  @media (max-width: 1100px) {
-    margin: 0;
-    font-size: 36px;
+    margin-right: 20px;
+    font-size: 26px;
   }
 `

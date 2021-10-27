@@ -1,13 +1,13 @@
 import styled from "styled-components"
 
 export const StyledHamburgerButton = styled.button`
+  display: none;
   border: none;
   background-color: transparent;
   width: 30px;
   height: 30px;
-  display: none;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 900px) {
     display: initial;
     margin: 10px;
     margin: 0 10px;
