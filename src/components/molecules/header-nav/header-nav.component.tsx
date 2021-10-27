@@ -4,35 +4,23 @@ import {
   StyledLinksList,
   StyledNavItems,
 } from "./header-nav.styled"
+import { navigation } from "constants/navigation"
 
 const HeaderNav = () => (
   <StyledWrapper>
     <StyledLinksList>
-      <li>
-        <StyledNavItems as={NavLink} exact to="/" activeClassName="active">
-          Home
-        </StyledNavItems>
-      </li>
-      <li>
-        <StyledNavItems as={NavLink} to="/projects" activeClassName="active">
-          Projects
-        </StyledNavItems>
-      </li>
-      <li>
-        <StyledNavItems as={NavLink} to="/stack" activeClassName="active">
-          Stack
-        </StyledNavItems>
-      </li>
-      <li>
-        <StyledNavItems as={NavLink} to="/about" activeClassName="active">
-          About
-        </StyledNavItems>
-      </li>
-      <li>
-        <StyledNavItems as={NavLink} to="/contact" activeClassName="active">
-          Contact
-        </StyledNavItems>
-      </li>
+      {navigation.map(({ path, displayName }, index) => (
+        <li key={index}>
+          <StyledNavItems
+            as={NavLink}
+            to={path}
+            activeClassName="active"
+            exact={path === "/"}
+          >
+            {displayName}
+          </StyledNavItems>
+        </li>
+      ))}
     </StyledLinksList>
   </StyledWrapper>
 )

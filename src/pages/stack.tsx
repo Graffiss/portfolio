@@ -3,7 +3,12 @@ import StackList from "../components/organisms/stack-list/stack-list.component"
 
 const StackView = () => (
   <StyledWrapper>
-    <StyledGrid>
+    <StyledGrid
+      initial="initial"
+      animate="enter"
+      exit="exit"
+      variants={{ exit: { transition: { staggerChildren: 0.005 } } }}
+    >
       <StackList />
     </StyledGrid>
   </StyledWrapper>

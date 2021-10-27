@@ -11,6 +11,13 @@ import IntroPage from "./intro"
 import AboutPage from "./about"
 import ProjectDetailsPage from "./project-details"
 import { ManagedUIContext } from "context/ui.context"
+import { AnimatePresence } from "framer-motion"
+
+const handleExitComplete = () => {
+  if (typeof window !== "undefined") {
+    window.scrollTo({ top: 0 })
+  }
+}
 
 const Root = () => (
   <Provider store={store}>
@@ -18,14 +25,16 @@ const Root = () => (
       <BrowserRouter>
         <MainTemplate>
           <Header />
-          <Switch>
-            <Route exact path="/" component={IntroPage} />
-            <Route exact path="/projects" component={ProjectsPage} />
-            <Route path="/projects/:id" component={ProjectDetailsPage} />
-            <Route path="/stack" component={StackPage} />
-            <Route path="/about" component={AboutPage} />
-            <Route path="/contact" component={ContactPage} />
-          </Switch>
+          <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
+            <Switch>
+              <Route exact path="/" component={IntroPage} />
+              <Route exact path="/projects" component={ProjectsPage} />
+              <Route path="/projects/:id" component={ProjectDetailsPage} />
+              <Route path="/stack" component={StackPage} />
+              <Route path="/about" component={AboutPage} />
+              <Route path="/contact" component={ContactPage} />
+            </Switch>
+          </AnimatePresence>
           <Footer />
         </MainTemplate>
       </BrowserRouter>
