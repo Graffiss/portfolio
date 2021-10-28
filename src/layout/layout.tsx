@@ -1,6 +1,6 @@
 import { FC } from "react"
 import { ThemeProvider } from "styled-components"
-import HamburgerMenu from "../components/organisms/hamburger-menu/hamburger-menu.component"
+import HamburgerMenu from "../components/molecules/hamburger-menu/hamburger-menu.component"
 import GlobalStyle from "../theme/global-style"
 import { useUI } from "../context/ui.context"
 import { darkTheme, lightTheme } from "../theme/theme"

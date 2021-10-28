@@ -3,9 +3,9 @@
   "version": "2.0.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
     "formik": "^2.2.9",
     "framer-motion": "^5.0.0",
     "react": "^17.0.2",
@@ -14,15 +14,23 @@
     "react-router-dom": "^5.3.0",
     "react-scripts": "^4.0.3",
     "react-toggle-button": "^2.2.0",
-    "redux": "^4.1.1",
+    "redux": "^4.1.2",
     "strip-ansi": "^7.0.1",
     "styled-components": "^5.3.3"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "html"
+    ]
   },
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
+    "coverage": "react-app-rewired test --coverage",
     "type-check": "tsc --noEmit",
     "lint": "eslint '{src,test,mocks}/**/*.{ts,tsx}'",
     "lint-errors": "eslint --quiet '{src,test,mocks}/**/*.{ts,tsx}'"
