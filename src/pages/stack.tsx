@@ -1,7 +1,7 @@
 import { StyledGrid, StyledWrapper } from "components/pages/stack/stack.styled"
 import StackList from "../components/organisms/stack-list/stack-list.component"
 
-const StackView = () => (
+const StackPage = () => (
   <StyledWrapper>
     <StyledGrid
       initial="initial"
@@ -14,4 +14,4 @@ const StackView = () => (
   </StyledWrapper>
 )
 
-export default StackView
+export default StackPage
