@@ -10,16 +10,8 @@ jobs:
         run: npm ci
       - name: "Lint"
         run: npm run lint
-      - name: "Test with coverage"
-        uses: paambaati/codeclimate-action@v2.7.5
-        env:
-          CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
-        with:
-          coverageCommand: npm run coverage
-          coverageLocations: |
-            ${{github.workspace}}/coverage/lcov.info:lcov
-      # - name: Coverage
-      #   run: npm run coverage
+      - name: Coverage
+        run: npm run coverage
       - name: Codecov
         uses: codecov/codecov-action@v2
         with:
