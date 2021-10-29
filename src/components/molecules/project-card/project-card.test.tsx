@@ -17,7 +17,7 @@ test("render ProjectCard", () => {
   expect(container).toBeInTheDocument()
 })
 
-test("ProjectCard button is rendered as correctly", () => {
+test("ProjectCard button is rendered correctly", () => {
   const { container } = render()
   const button = container.querySelector("button")
   expect(button).toBeInTheDocument()
