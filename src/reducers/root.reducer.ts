@@ -1,8 +1,8 @@
 import portfolioGif from "../assets/gifs/projects/portfolio.gif"
 import hangmanGif from "../assets/gifs/projects/hangman-game.gif"
-import { ProjectsState, Technology } from "./reducer.interface"
+import { ProjectsState, Technology } from "./root.reducer.interface"
 
-const initialState: ProjectsState = {
+export const initialState: ProjectsState = {
   projects: [
     {
       id: 1,

@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { Project } from "reducers/reducer.interface"
+import { Project } from "reducers/root.reducer.interface"
 import Button from "../../components/atoms/button/button.styled"
 import {
   StyledButtons,

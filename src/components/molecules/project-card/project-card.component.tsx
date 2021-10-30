@@ -1,6 +1,6 @@
 import { FC, useState } from "react"
 import { Redirect } from "react-router-dom"
-import { Project } from "reducers/reducer.interface"
+import { Project } from "reducers/root.reducer.interface"
 import Button from "../../atoms/button/button.styled"
 import { StyledProject } from "./project-card.styled"
 

@@ -1,12 +1,8 @@
-import { ErrorMessage, Field, Formik } from "formik"
+import { ErrorMessage, Field, Formik, FormikValues } from "formik"
 import Button from "components/atoms/button/button.styled"
 import { StyledForm, StyledInput, StyledTextarea } from "./form.styled"
-
-const encode = (data: any) => {
-  return Object.keys(data)
-    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-    .join("&")
-}
+import { handleSubmit } from "helpers/send-form"
+import { FC } from "react"
 
 const initialValues = {
   "bot-field": "",
@@ -14,9 +10,13 @@ const initialValues = {
   email: "",
   title: "",
   message: "",
+} as FormikValues
+
+interface Props {
+  submit: typeof handleSubmit
 }
 
-const Form = () => {
+const Form: FC<Props> = ({ submit }) => {
   return (
     <Formik
       initialValues={initialValues}
@@ -33,16 +33,7 @@ const Form = () => {
         }
         return errors
       }}
-      onSubmit={(values, { resetForm }) => {
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({ ...values }),
-        })
-          .then(() => console.log("Form has been sent"))
-          .catch((error) => console.log(error))
-        resetForm()
-      }}
+      onSubmit={submit}
     >
       {({ values, handleBlur, handleSubmit, handleChange, isSubmitting }) => (
         <StyledForm onSubmit={handleSubmit}>
@@ -57,6 +48,7 @@ const Form = () => {
             name="email"
             placeholder="Email"
             value={values.email}
+            data-testid="email"
           />
           <ErrorMessage name="email" component="div" />
           <label htmlFor="title">Message title</label>
@@ -68,6 +60,7 @@ const Form = () => {
             name="title"
             placeholder="Message title"
             value={values.title}
+            data-testid="title"
           />
           <ErrorMessage name="text" component="div" />
           <label htmlFor="message">Your message</label>
@@ -78,9 +71,14 @@ const Form = () => {
             name="message"
             placeholder="Type your message here..."
             value={values.message}
+            data-testid="message"
           />
           <ErrorMessage name="message" component="div" />
-          <Button type="submit" disabled={isSubmitting}>
+          <Button
+            type="submit"
+            disabled={isSubmitting}
+            data-testid="submit-button"
+          >
             Send
           </Button>
         </StyledForm>

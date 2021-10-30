@@ -1,3 +1,4 @@
 ignore:
   - "**/*.styled.ts"
   - "src/theme/global-style.ts"
+  - "src/store/index.ts"

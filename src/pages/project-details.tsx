@@ -5,7 +5,7 @@ import { connect } from "react-redux"
 import Button from "../components/atoms/button/button.styled"
 import ProjectDetailsTemplate from "../templates/project-details.template/project-details"
 import { StyledWrapper } from "components/pages/project-details/project-details.styled"
-import { ProjectsState } from "reducers/reducer.interface"
+import { ProjectsState } from "reducers/root.reducer.interface"
 
 type ProjectDetailsPageState = ReturnType<typeof mapStateToProps>
 

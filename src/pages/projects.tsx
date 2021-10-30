@@ -5,7 +5,7 @@ import {
   StyledProjectWrapper,
   StyledWrapper,
 } from "components/pages/projects/projects.styled"
-import { ProjectsState } from "reducers/reducer.interface"
+import { ProjectsState } from "reducers/root.reducer.interface"
 
 const ProjectPage = ({ projects }: ProjectsState) => (
   <StyledWrapper>

@@ -1,6 +1,6 @@
-import { ProjectsState } from "reducers/reducer.interface"
+import { ProjectsState } from "reducers/root.reducer.interface"
 import { createStore, Store } from "redux"
-import Reducer from "../reducers"
+import Reducer from "../reducers/root.reducer"
 
 /* eslint-disable no-underscore-dangle */
 const store: Store<ProjectsState> = createStore(
