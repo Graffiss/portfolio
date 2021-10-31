@@ -8,7 +8,7 @@ import {
   StyledImage,
   StyledParagraph,
   StyledWrapper,
-} from "./project-details.styled"
+} from "./project-details.template.styled"
 
 const ProjectDetailsTemplate: FC<Project> = ({
   title,

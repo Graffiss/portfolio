@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { RouteComponentProps } from "react-router"
 import { connect } from "react-redux"
 import Button from "../components/atoms/button/button.styled"
-import ProjectDetailsTemplate from "../templates/project-details.template/project-details"
+import ProjectDetailsTemplate from "../templates/project-details.template/project-details.template"
 import { StyledWrapper } from "components/pages/project-details/project-details.styled"
 import { ProjectsState } from "reducers/root.reducer.interface"
 
@@ -12,8 +12,6 @@ type ProjectDetailsPageState = ReturnType<typeof mapStateToProps>
 interface MatchParams {
   id: string
 }
-
-// interface MatchProps extends RouteComponentProps<MatchParams> {}
 
 const ProjectDetailsPage: FC<ProjectDetailsPageState> = ({ activeItem }) => {
   const [{ title, demo, desc, github, image, stack }] = activeItem
@@ -32,6 +30,7 @@ const ProjectDetailsPage: FC<ProjectDetailsPageState> = ({ activeItem }) => {
       <Link
         style={{ color: "inherit", textDecoration: "inherit" }}
         to="/projects"
+        data-testid="back-button"
       >
         <Button>Back</Button>
       </Link>
@@ -50,4 +49,4 @@ const mapStateToProps = (
   }
 }
 
-export default connect(mapStateToProps)(ProjectDetailsPage)
+export default connect()(ProjectDetailsPage)
