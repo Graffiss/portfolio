@@ -4,13 +4,10 @@ import {
   RenderOptions,
   RenderResult,
 } from "@testing-library/react"
-// import { useUI } from "context/ui.context"
 import React from "react"
 import { ThemeProvider } from "styled-components"
 import { lightTheme } from "../theme/theme"
 
-// const { nightMode } = useUI()
-// const themeMode = nightMode === false ? lightTheme : darkTheme
 // @ts-ignore
 export function renderWithTheme(
   ui: React.ReactElement,
