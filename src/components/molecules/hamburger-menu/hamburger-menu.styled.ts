@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const StyledMenu = styled.div<{ opened: boolean }>`
   grid-area: burger;
-  position: absolute;
+  position: fixed;
   width: 100vw;
   max-width: 900px;
   height: 100vh;

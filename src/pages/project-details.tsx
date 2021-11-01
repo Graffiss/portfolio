@@ -49,4 +49,4 @@ const mapStateToProps = (
   }
 }
 
-export default connect()(ProjectDetailsPage)
+export default connect(mapStateToProps)(ProjectDetailsPage)
